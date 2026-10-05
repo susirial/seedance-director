@@ -1,0 +1,14 @@
+[
+  {"kind":"component","id":"look.natural","axis":"look","name":"自然生活质感","aliases":[],"description":"保留使用痕迹与现场光色。","rules":["脏旧程度来自故事环境而非统一加污渍。","主光来自真实窗、灯或天空。"],"compatibility_notes":"自然不等于低曝光或低饱和一刀切。"},
+  {"kind":"component","id":"look.classic-low-key","axis":"look","name":"古典低调光","aliases":[],"description":"暗部包围主体，关键细节仍可辨。","rules":["用侧光或实用灯塑造脸和手。","明确背景层次与曝光重点。"],"compatibility_notes":"不能以暗为由隐藏必须看清的动作。"},
+  {"kind":"component","id":"look.monochrome","axis":"look","name":"黑白明暗","aliases":["黑白"],"description":"用亮度、纹理和轮廓区分物体。","rules":["角色与背景不可只靠颜色区别。","设置黑、中灰、亮部的层级。"],"compatibility_notes":"原文以颜色为证据时需保留彩色或提出替代并确认。"},
+  {"kind":"component","id":"look.retro-neon","axis":"look","name":"复古霓虹","aliases":[],"description":"受控的实用灯色与玻璃反射。","rules":["每种色光指定来源。","主肤色或物体识别色不被所有灯覆盖。"],"compatibility_notes":"不自动加入雨、烟、慢动作。"},
+  {"kind":"component","id":"look.pastel-geometric","axis":"look","name":"粉彩图形","aliases":[],"description":"有限粉彩色板与清楚几何分区。","rules":["挑一个主体强调色。","保持线条、间距和背景形状可重复。"],"compatibility_notes":"几何构图不要求人物始终僵直居中。"},
+  {"kind":"component","id":"look.clean-commercial","axis":"look","name":"明净商业","aliases":[],"description":"减少干扰，让产品与功能可辨。","rules":["控制反射而不是磨掉全部纹理。","留出文案区域但不生成无来源标语。"],"compatibility_notes":"清洁不等于任何产品都用白背景。"},
+  {"kind":"component","id":"look.industrial-future","axis":"look","name":"工业未来","aliases":[],"description":"以结构、尺度、材料组织未来空间。","rules":["先决定通道、接口和部件关系。","限制发光元件，保留视觉主次。"],"compatibility_notes":"不因科幻就给任何物体加悬浮或粒子。"},
+  {"kind":"component","id":"look.epic-fantasy","axis":"look","name":"史诗奇幻","aliases":[],"description":"以地标与人物尺度产生环境力量。","rules":["给出能定位的前中后景。","奇异材料也要维持自身规则。"],"compatibility_notes":"局部功能演示优先信息清楚，必要时不用宏大环境。"},
+  {"kind":"component","id":"look.ink-wash","axis":"look","name":"水墨留白","aliases":[],"description":"以墨色层次、湿干边缘和留白表达空间。","rules":["主体轮廓要在淡墨中可读。","明确哪些部分晕染、哪些保持形状。"],"compatibility_notes":"可二维或三维，必须声明主实现。"},
+  {"kind":"component","id":"look.paper-craft","axis":"look","name":"剪纸与纸艺","aliases":[],"description":"利用纸层、切边和投影建立形体。","rules":["维持厚度与层叠顺序。","动作按关节、纸层或滑移设计。"],"compatibility_notes":"不能同时要求薄纸和弹性黏土形变而不解释。"},
+  {"kind":"component","id":"look.painterly","axis":"look","name":"绘画笔触","aliases":[],"description":"笔触结构参与形体与光色表达。","rules":["先选水彩透明叠色或油画厚涂等主工艺。","纹理尺寸在连续镜头中保持。"],"compatibility_notes":"绘画感不是让五官逐帧随机变化。"},
+  {"kind":"component","id":"look.archival-film","axis":"look","name":"怀旧胶片与档案","aliases":[],"description":"受控颗粒、柔和高光与年代美术。","rules":["先核对年代物件，再加影像纹理。","颗粒不得遮住必要信息。"],"compatibility_notes":"模拟档案观感必须避免伪称真实历史素材。"}
+]

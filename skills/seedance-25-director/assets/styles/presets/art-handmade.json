@@ -1,0 +1,56 @@
+[
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.ink-landscape","family":"art-handmade","name":"水墨留白","aliases":["国风水墨"],"description":"以墨色虚实和留白组织主体与空间。",
+    "components":{"media":"media.painted-2d","look":"look.ink-wash","direction":"direction.observational","purpose":"purpose.drama"},
+    "suitable_for":["含蓄空间","自然观察"],"avoid_when":["产品标识必须细小而清晰可读"],
+    "character_design":"主体浓墨轮廓与服饰识别点固定。","environment_design":"桥、岸与水以虚实区分，留白不抹掉地理。",
+    "visual_rules":"宣纸底色、干湿边缘、浓淡三层；动作对象边界清楚。","motion_rules":"墨晕只能发生在指定水面或云层，角色不自行溶化。","sound_rules":"水声与脚步，音乐可无。","performance_rules":"行走由脚步与身体位移构成，不靠整体平移。",
+    "continuity_anchors":["深墨衣","岸在画右","伞未打开"],"failure_modes":["人物融入背景：加清楚外轮廓与局部浓墨。"],
+    "example":{"source":"持闭伞的人走到桥尾，在岸边停住。","invariants":["伞保持闭合","走到桥尾","岸边停住"],"director_intent":"用浓墨人物与淡墨空间形成一次到达。","shot_reason":"侧面全景保留桥与岸的关系。","references":["待制作深墨衣持伞人物","待制作桥岸单幅关键帧"],"image_prompt_en":"Chinese ink-wash illustration on warm rice paper. A dark-robed original figure stands on the left half of a pale stone bridge, holding one closed umbrella in the right hand. The right bank remains visible beyond the bridge. Dry dark outlines define the figure; diluted ink describes water below, broad blank sky, clear side-wide composition. Aspect ratio 16:9.","image_prompt_zh":"深墨人物在淡墨桥左半段，右手闭伞，右岸可见，水面淡墨、天空留白。","end_state":"人物在右岸停步，闭伞仍在右手。","video_prompt_zh":"@图片1 参考人物轮廓、闭伞与桥岸布局。保持水墨留白。0–6秒：固定侧面全景，人物从桥上向画右走到岸边。6–9秒：停住，右手闭伞保持垂下。仅水面淡墨缓慢流动，人物轮廓不晕散。脚步停后只留水声，无对白、无配乐，不打开伞。","duration_seconds":9,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作水墨起始关键帧"}],"status":"planned","media_tested":false,"checks":["伞一直闭","桥岸关系不变","脚步而非滑行","右岸停步","主体不溶化"],"fallback":"晕染失控时减少动态墨晕，保留静态纸纹和真实位移。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.gongbi-color","family":"art-handmade","name":"工笔设色","aliases":[],"description":"通过稳定细线和层染表现衣纹与器物。",
+    "components":{"media":"media.painted-2d","look":"look.painterly","direction":"direction.classical","purpose":"purpose.drama"},
+    "suitable_for":["器物与衣纹","细致轻动作"],"avoid_when":["快速大幅扭转导致纹样难保持"],
+    "character_design":"服饰与发型由设定确定，细线装饰有固定位置。","environment_design":"案、窗、器物的平面层次清楚。",
+    "visual_rules":"细线勾勒与薄层设色，不混入厚油画笔触。","motion_rules":"克制关节运动，动作对象保持边界。","sound_rules":"器物声简洁，不用配乐替代动作。","performance_rules":"手与视线同向，衣袖不遮住关键接触。",
+    "continuity_anchors":["青衣袖口","白瓷杯","案面位置"],"failure_modes":["衣纹游走：减少装饰密度，保留关键纹样锚点。"],
+    "example":{"source":"青衣人把白瓷杯放在案上，松手。","invariants":["白杯","放案上","之后松手"],"director_intent":"用细线器物的稳定接触形成完成感。","shot_reason":"斜上中近景让杯底与手关系可读。","references":["待制作虚构青衣人物","待制作持杯于案上方起始帧"],"image_prompt_en":"Gongbi-style fine-line color illustration. An original figure in a plain teal robe holds one white porcelain cup with the right hand just above a wooden desk. Three-quarter elevated medium-close composition, slender controlled outlines, translucent mineral-color layers, a pale window-light shape from frame left, sleeve clear of the cup base. Aspect ratio 16:9.","image_prompt_zh":"青衣右手持白杯在案面上方，细线薄设色，画左窗光色块，袖口不挡杯底。","end_state":"杯底贴案，右手松开，白杯完整。","video_prompt_zh":"@图片1 参考青衣造型、白杯和案面。保持工笔细线与薄层设色。0–4秒：固定斜上中近景，右手把白杯下放到案上。4–7秒：杯底接触后手松开，衣袖随手回收一点，不盖住杯。只留瓷杯轻触木案声，无对白、无配乐，线条与杯口形状不漂移。","duration_seconds":7,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作工笔单幅起始帧"}],"status":"planned","media_tested":false,"checks":["杯底先接触","右手后松","袖不遮杯","细线稳定","无新增纹样"],"fallback":"纹样闪动时改用素色衣袖，而不是把手部动作删掉。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.watercolor","family":"art-handmade","name":"水彩绘本","aliases":[],"description":"以透明叠色与纸纹表达轻盈空间。",
+    "components":{"media":"media.painted-2d","look":"look.painterly","direction":"direction.observational","purpose":"purpose.drama"},
+    "suitable_for":["轻生活片段","温和环境"],"avoid_when":["需要硬边工业细节逐项比对"],
+    "character_design":"脸与服装主色保留清楚边界。","environment_design":"湿边背景与较清晰行动区域分开。",
+    "visual_rules":"薄涂叠色与纸白，不能全场无边界。","motion_rules":"背景纸纹保持，不让噪声抖动冒充手绘。","sound_rules":"雨或水只在原文有时出现。","performance_rules":"姿态改变清晰，少量动作足够。",
+    "continuity_anchors":["橙色雨衣","窗台花盆","一滴水"],"failure_modes":["水滴变大片液体：明确单滴，必要时局部特写。"],
+    "example":{"source":"穿橙雨衣的人在窗台接住叶尖落下的一滴水。","invariants":["橙雨衣","叶尖单滴","手接住"],"director_intent":"把小观察放大，不新增伤感故事。","shot_reason":"手与叶同框，人物只露必要轮廓。","references":["待制作橙雨衣人物","待制作叶尖与掌心起始帧"],"image_prompt_en":"Transparent watercolor illustration on textured white paper. An orange raincoat sleeve enters from frame left, an open right palm beneath one droplet hanging from a green leaf on a windowsill plant. Medium-close composition, leaf and hand edges distinct, soft blue window background, diluted washes and visible paper white. Aspect ratio 16:9.","image_prompt_zh":"橙雨衣右手掌心在叶尖下，叶尖一滴水，蓝色柔背景与纸白，手叶边界清楚。","end_state":"水滴在掌心，叶尖不再挂水，手仍停着。","video_prompt_zh":"@图片1 参考雨衣、叶尖与掌心位置。保持透明水彩和静止纸纹。0–3秒：固定近景，一滴水从叶尖落下。3–6秒：水滴落在右手掌心，手略微收拢后停住。叶尖不再滴水，不额外下雨，只有单滴轻响与室内静声，无对白、无配乐。","duration_seconds":6,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作叶尖单滴起始帧"}],"status":"planned","media_tested":false,"checks":["只有一滴","落入右掌","雨衣橙色不变","纸纹不闪","无新增雨景"],"fallback":"单滴不可读时放大叶与手的占比，不把它改成持续流水。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.oil-impasto","family":"art-handmade","name":"油画厚涂","aliases":[],"description":"以随形体的笔触建立体积和光色。",
+    "components":{"media":"media.painted-2d","look":"look.painterly","direction":"direction.intimate","purpose":"purpose.drama"},
+    "suitable_for":["缓慢动作","光色关系"],"avoid_when":["快速多主体动作难保笔触与身份"],
+    "character_design":"用色块与轮廓固定身份，面部笔触不每帧换方向。","environment_design":"选择少量有体积的物件，笔触尺度统一。",
+    "visual_rules":"厚涂亮部、受控暗部、笔触顺着布褶和表面。","motion_rules":"形体先连续，表面笔触随后稳定附着。","sound_rules":"材料声与动作对应，无需宏大音乐。","performance_rules":"手的触碰和收回要完整。",
+    "continuity_anchors":["棕毛衣","苹果数量","桌布褶皱"],"failure_modes":["苹果变脸或液体：固定轮廓，不要求笔触自行翻涌。"],
+    "example":{"source":"棕毛衣女子把桌上的苹果向窗光里移近一点。","invariants":["一只苹果","移向窗光","不拿走"],"director_intent":"通过物体位置改变显现光色，而非凭空变亮。","shot_reason":"桌面中近景能对比移动前后亮度。","references":["待制作棕毛衣女子","待制作苹果与窗光起始帧"],"image_prompt_en":"Impasto oil-painting illustration, medium-close view of a wooden table. A brown-sweater sleeve and right hand rest beside one red apple just outside a patch of window light at frame left. Thick directional brushstrokes describe the apple's round volume, quieter dark strokes on the table, fixed linen folds in the background. Aspect ratio 16:9.","image_prompt_zh":"苹果在画左窗光边外，棕毛衣右手在旁，笔触沿苹果体积，桌布褶皱固定。","end_state":"苹果移入窗光，右手离开，亮部来自位置变化。","video_prompt_zh":"@图片1 参考棕毛衣、苹果和窗光位置。保持厚涂油画形体。0–4秒：右手把一只苹果沿桌面向画左窗光轻移。4–7秒：苹果停在光里，右手收回，笔触仍贴合苹果表面，窗光本身不移动。固定桌面中近景，轻微摩擦声，无对白、无配乐，苹果不变形。","duration_seconds":7,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作油画起始帧"}],"status":"planned","media_tested":false,"checks":["苹果只有一只","移向左光区","光源未漂移","右手离开","笔触不破形"],"fallback":"接触不稳时减少位移，并用影子变化保留进入光区的证据。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.paper-cut","family":"art-handmade","name":"剪纸层叠","aliases":[],"description":"纸层、切边和投影共同建立空间。",
+    "components":{"media":"media.stop-motion","look":"look.paper-craft","direction":"direction.graphic","purpose":"purpose.drama"},
+    "suitable_for":["轮廓叙事","层次变化"],"avoid_when":["连续真实转身需要展示立体背面"],
+    "character_design":"明确纸偶关节与色纸块，不写皮肤毛孔。","environment_design":"门与背景纸层先后固定。",
+    "visual_rules":"保持纸厚、切边与投影，人物不突然成为实体CG。","motion_rules":"按纸片滑移或铰接运动，不要求弹性肢体扭转。","sound_rules":"轻纸声，不默认写实巨响。","performance_rules":"姿态通过关节角度改变。",
+    "continuity_anchors":["红衣纸偶","门层在前","蓝背景在后"],"failure_modes":["纸层互穿：减少层数并明确前后顺序。"],
+    "example":{"source":"红衣纸偶推开纸门，露出后面的蓝色房间。","invariants":["纸偶推门","纸门打开","蓝房间在后"],"director_intent":"以纸层让遮挡和揭示可见。","shot_reason":"正面构图把门的铰接关系看清。","references":["待制作红衣纸偶","待制作闭门纸层关键帧"],"image_prompt_en":"Layered paper-cut illustration, frontal medium-wide composition. A red-coated paper figure stands left of a closed cream paper door, right paper hand touching its edge. The hinge lies on the door's right side. Visible cut edges and thin layered shadows under soft top light, a hint of blue paper behind the frame. Aspect ratio 16:9.","image_prompt_zh":"红衣纸偶在门左，右手接门沿，门右侧铰接，蓝纸房间在后，切边与投影可见。","end_state":"门沿右铰链打开，蓝房间露出，纸偶仍在左侧。","video_prompt_zh":"@图片1 参考红衣纸偶、门铰链与纸层顺序。0–5秒：固定正面中全景，纸偶右手推门，门沿右侧铰链缓慢开启。5–8秒：露出后方蓝色房间，人物留在左侧，纸层厚度与顶光投影不变。只有轻纸摩擦声，无对白、无配乐，纸偶不变成立体皮肤。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作纸门关闭状态关键帧"}],"status":"planned","media_tested":false,"checks":["右侧铰链不换边","门后蓝房间","纸偶保持左侧","切边稳定","纸层不互穿"],"fallback":"开门透视难以保持时缩小开启角，仍必须露出蓝色后层。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.clay-stop-motion","family":"art-handmade","name":"黏土定格质感","aliases":[],"description":"以手工表面、稳定偶形和明确支点表现动作。",
+    "components":{"media":"media.stop-motion","look":"look.natural","direction":"direction.observational","purpose":"purpose.comedy"},
+    "suitable_for":["触感动作","手工轻喜剧"],"avoid_when":["需要真实人物或机械材质还原"],
+    "character_design":"指压痕可保留，眼鼻与关节位置固定。","environment_design":"台景比例、地面接触和物件重力可读。",
+    "visual_rules":"柔和棚光展示材料，而非统一塑料反光。","motion_rules":"姿态有意分步，不能随机抖动全画面。","sound_rules":"软材料轻响，避免无来源笑声。","performance_rules":"反应有先后，眼睛不任意离开面部。",
+    "continuity_anchors":["蓝黏土围裙","一颗面团","双脚接地"],"failure_modes":["偶形融化：限制形变到被按的面团，身体保持。"],
+    "example":{"source":"黏土厨师用掌心把一颗面团压扁，抬手看着它。","invariants":["一颗面团","掌心压扁","抬手看"],"director_intent":"材料变化就是事件，不另加戏剧冲突。","shot_reason":"斜上中景显示掌心与面团形变。","references":["待制作蓝围裙黏土厨师","待制作圆面团起始帧"],"image_prompt_en":"Clay stop-motion-style miniature scene, three-quarter elevated medium view. An original clay cook in a blue apron stands behind a small table, right palm hovering above one round beige dough ball. Soft studio light shows fingerprints on the clay and a clear contact shadow under the dough; the cook's feet remain planted. Aspect ratio 16:9.","image_prompt_zh":"蓝围裙黏土厨师右掌在圆面团上方，柔棚光、指压痕与接触影清楚。","end_state":"面团被压成扁圆，右手抬起，厨师看着它。","video_prompt_zh":"@图片1 参考厨师偶形、蓝围裙、面团和桌子比例。模拟黏土定格观感。0–4秒：右掌下压一颗面团，使其成为扁圆，只有面团形变。4–8秒：右手抬起，厨师低头看它，双脚不移动。固定斜上中景，台景不抖，软压声与抬手轻响，无对白、无配乐。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作黏土起始帧"}],"status":"planned","media_tested":false,"checks":["面团一颗","只有面团变形","身体不融化","先压后抬","双脚接地"],"fallback":"手部融化时降低压幅，保留形状从圆到扁的清楚变化；不称实际逐格拍摄。"}
+  }
+]

@@ -1,0 +1,18 @@
+name: 内容问题
+description: 课文、提示词、配图或技能说明需要修正
+title: "内容: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题
+      description: 写明课号、图片路径或技能文件，以及哪里不对。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望
+      description: 希望改成什么样。若涉及官方案例帧，请注明出处。
+    validations:
+      required: false

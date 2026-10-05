@@ -1,0 +1,74 @@
+[
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.documentary-natural","family":"live-action","name":"自然纪实","aliases":["自然纪实电影"],"description":"让人物行动在可读的生活空间中发生。",
+    "components":{"media":"media.photographic","look":"look.natural","direction":"direction.observational","purpose":"purpose.drama"},
+    "suitable_for":["日常行动","不急于解释的关系"],"avoid_when":["必须持续看清极小文字，改用插入特写"],
+    "character_design":"生活化服装，固定发型和使用痕迹，不统一磨皮。","environment_design":"先画柜台、门和灯的位置，再加有限生活物件。",
+    "visual_rules":"平视中全景，人物与动作对象同框；环境灯为主，保持前中后景。","motion_rules":"固定观察或因人移动才跟随，保留完成动作所需时间。","sound_rules":"现场声分层，无需默认配乐。","performance_rules":"手有具体任务，表情不过度预告结果。",
+    "continuity_anchors":["钥匙数量","右手持物","柜台与门方向"],"failure_modes":["自动推近丢掉手部：固定构图并保留柜台下沿。"],
+    "example":{"source":"夜班店员拿起柜台上的旧钥匙，门铃响，她看向门口，没有离开柜台。","invariants":["拿起旧钥匙","门铃后看门口","不离开柜台"],"director_intent":"让一次普通动作被门铃打断，不解释来者。","shot_reason":"中全景同时容纳手与转头，避免用反打提前给答案。","references":["待制作角色图：短发、蓝色针织衫","待制作场景图：北柜台、东入口；据此制作单幅起始帧"],"image_prompt_en":"Photographic medium-wide view from the west end of a shop counter. An original short-haired woman in a blue cardigan stands behind it, her right hand resting beside one old brass key. The east doorway remains visible at frame right. Cool overhead practical light, faint window fill, readable room depth, natural fabric texture. Aspect ratio 16:9.","image_prompt_zh":"柜台西侧平视中全景，右手在单把钥匙旁，入口在画右，顶灯与窗光。","end_state":"钥匙在右手中，店员仍在柜台后看向画右门口。","video_prompt_zh":"@图片1 参考店员身份、柜台地理与起始构图，不改变钥匙数量。写实生活质感。0–3秒：固定中全景，她用右手拿起旧钥匙。3–5秒：画右入口传来门铃，她转头看向那里。5–8秒：她仍站在柜台后，右手留着钥匙。顶灯不变，保留钥匙轻响和店内电流声，无对白、无配乐，不切镜。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作的单幅起始关键帧；普通参考，不是专门首帧"}],"status":"planned","media_tested":false,"checks":["钥匙只有一把","右手拿取","门铃先于转头","入口方向不变","没有离开柜台"],"fallback":"拿取变形时保留取钥匙的独立插入镜头，再切回转头，不删事件。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.intimate-realism","family":"live-action","name":"亲密现实主义","aliases":[],"description":"用人物与道具的近距离关系承载选择。",
+    "components":{"media":"media.photographic","look":"look.classic-low-key","direction":"direction.intimate","purpose":"purpose.romance"},
+    "suitable_for":["微小选择","克制表演"],"avoid_when":["复杂空间交接，先加建立镜头"],
+    "character_design":"皮肤和衣料保留自然纹理，固定手部饰物。","environment_design":"只保留与动作有关的桌面和一盏灯。",
+    "visual_rules":"眼睛与手在可读范围，背景柔化但不隐藏动作对象。","motion_rules":"轻微推进应在行动改变后开始，不持续漂移。","sound_rules":"纸声与呼吸先于音乐。","performance_rules":"行为载情绪，不默认哭泣。",
+    "continuity_anchors":["信封未拆","左手压住信","灯在画右"],"failure_modes":["浅景深让手消失：加深焦点范围，不增加一堆特写。"],
+    "example":{"source":"她把未拆的信推到桌子中央，又用左手压住，没有打开。","invariants":["推信","左手压住","不拆信"],"director_intent":"看见动作反复中的犹疑，拒绝泪水替代行动。","shot_reason":"近景把目光与手的停顿联系起来。","references":["待制作短发女子与灰色衬衫定妆","待制作单幅桌边关键帧"],"image_prompt_en":"Photographic close view of an original woman in a grey shirt seated beside a wooden table. Her left fingertips touch an unopened cream envelope near the table edge. Her lowered eyes and the envelope are both readable. A shaded lamp at frame right lights her cheek and hand; the background falls into soft brown shadow. Aspect ratio 16:9.","image_prompt_zh":"近景同框呈现低垂目光和左手，未拆信封在桌沿，右侧台灯。","end_state":"信在桌子中央，被左掌压住，封口完整。","video_prompt_zh":"@图片1 参考人物、台灯与桌面布局，信封封口保持完整。0–4秒：固定近景，她用左手把信推到桌子中央，手短暂松开。4–8秒：左掌重新压住信，目光仍落在信上。手伸出的方向预留画面空间，灯不变，只有纸张摩擦与一次呼吸，无配乐，不切镜，不打开信。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作起始关键帧，身份与桌面参考"}],"status":"planned","media_tested":false,"checks":["推到中央","左手未换手","封口未破","脸和信仍可读","灯光无跳变"],"fallback":"手出画时扩大为中近景，保留完整动作而非只拍脸。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.classical-period","family":"live-action","name":"古典年代","aliases":[],"description":"以稳定构图和有依据的服化道组织人物关系。",
+    "components":{"media":"media.photographic","look":"look.classic-low-key","direction":"direction.classical","purpose":"purpose.drama"},
+    "suitable_for":["年代剧情","平衡双人戏"],"avoid_when":["年代未定却要求史实准确，先确认背景"],
+    "character_design":"服装年代由原文确定；示例为虚构旧式旅店。","environment_design":"入口、柜台、灯与交接物有固定位置。",
+    "visual_rules":"平衡双人中景，暖实用光与冷背景分层，手部不过暗。","motion_rules":"动作交接完成后才切反应，机位不无故越轴。","sound_rules":"对白清楚，木与金属声有距离。","performance_rules":"用伸手与等待表现关系，不把古典等同于僵硬。",
+    "continuity_anchors":["柜台两侧站位","钥匙交接方向","灯的位置"],"failure_modes":["画面太暗：只补交接手部，不改变全场时间。"],
+    "example":{"source":"旧式旅店里，店主把钥匙推给旅人。旅人接住，说“谢谢”。","invariants":["店主推出","旅人接住","原句谢谢"],"director_intent":"交接完成才让礼貌落地。","shot_reason":"双人中景证明物件从谁到谁。","references":["待制作棕背心店主与灰外套旅人定妆","待制作虚构旧旅店起始帧"],"image_prompt_en":"A photographic balanced two-shot across a dark wooden inn counter. An original innkeeper in a brown waistcoat stands at frame left, an original traveler in a grey coat at right. One brass key lies beside the innkeeper's right hand. A shaded oil lamp behind the counter lights both hands, with a dim blue doorway beyond. Aspect ratio 16:9.","image_prompt_zh":"双人隔柜台，店主画左、旅人画右，灯照清双手，钥匙仍在店主侧。","end_state":"钥匙已在旅人左手，双方仍隔柜台。","video_prompt_zh":"@图片1 参考两人身份、服装与柜台布局，不转移任何额外人物。0–4秒：固定双人中景，店主右手把一把钥匙推向画右旅人。4–8秒：旅人左手接住，抬眼对店主说“谢谢”。保持灯与门位置，无配乐，保留金属擦木声，不越轴、不加新台词。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作双人起始关键帧，普通参考"}],"status":"planned","media_tested":false,"checks":["店主先推","旅人左手接","钥匙不复制","谢谢由旅人说","轴线稳定"],"fallback":"接触失败则在钥匙停到旅人侧后切其拿取，保持交接事实。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.monochrome-noir","family":"live-action","name":"黑白黑色电影","aliases":[],"description":"让亮度与遮挡控制观众知道的信息。",
+    "components":{"media":"media.photographic","look":"look.monochrome","direction":"direction.expressive","purpose":"purpose.suspense"},
+    "suitable_for":["遮挡揭示","等待"],"avoid_when":["颜色本身是必要证据"],
+    "character_design":"通过外套轮廓与明暗区分人物。","environment_design":"门、窗与阴影的几何关系保持可解释。",
+    "visual_rules":"侧硬光照出手和门边，黑色仍有层次。","motion_rules":"拉开只为揭示目标，不随意倾斜摄影机。","sound_rules":"离画声必须有方位，静默为等待留空间。","performance_rules":"动作停顿不等于面部僵硬。",
+    "continuity_anchors":["门开方向","帽子位置","空房结局"],"failure_modes":["黑位吞没帽子：增加轮廓分离而非全场提亮。"],
+    "example":{"source":"男人推开半掩的门，发现屋里无人，椅子上留着一顶帽子。","invariants":["推门","屋里无人","帽子在椅子"],"director_intent":"先给进入动作，再让物件替代人物出现。","shot_reason":"背侧中景拉宽后能同时看门与椅子。","references":["待制作深色外套原创男子","待制作门口与椅子布局关键帧"],"image_prompt_en":"Black-and-white photographic medium view behind an original man in a dark coat at a half-open door. His left palm rests on the door edge. A hard window beam crosses the floor inside, while the chair deeper in the room is hidden by the door panel. Distinct mid-grey walls, rich but readable shadows. Aspect ratio 16:9.","image_prompt_zh":"男子背侧中景，左掌在门边，门挡住深处椅子，窗光斜照地板。","end_state":"门完全打开，空屋与椅子上的帽子同时可见。","video_prompt_zh":"@图片1 参考男子身份和门窗地理。保持黑白影调。0–4秒：男子左手推开门，摄影机沿门外缓慢后拉一点，始终不穿墙。4–8秒：门让出视线，露出空屋与椅子上的一顶帽子，男子停在门边。窗光方向不变，只有门轴声与屋内空响，不加人物或对白。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作门口起始帧，空间与身份参考"}],"status":"planned","media_tested":false,"checks":["先推门后揭示","帽子在椅上","无人出现","影调可读","机位不穿墙"],"fallback":"拉宽遮挡失控时切一个空屋反向镜头，不改变帽子结局。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.retro-urban-neon","family":"live-action","name":"复古霓虹都市","aliases":[],"description":"用城市实用灯色与反射形成空间距离。",
+    "components":{"media":"media.photographic","look":"look.retro-neon","direction":"direction.expressive","purpose":"purpose.drama"},
+    "suitable_for":["城市内外关系","窗边等待"],"avoid_when":["必须精确还原物体本色的商品检验"],
+    "character_design":"固定服装主色，避免彩光掩盖身份。","environment_design":"规定招牌、室内灯和玻璃的位置，不默认雨夜。",
+    "visual_rules":"反射只出现于玻璃，暖冷来源分清。","motion_rules":"沿人物视线短横移，不靠连续环绕制造氛围。","sound_rules":"车声由远而近，室内外声场有分界。","performance_rules":"用一次转头或收手承载注意力。",
+    "continuity_anchors":["玻璃内外","杯子在左手","红招牌方向"],"failure_modes":["倒影变成第二个人：降低反射占比，保留真实主体。"],
+    "example":{"source":"她在小吃店窗边端着茶，公交车驶过，她把目光收回杯口。","invariants":["窗边端茶","公交驶过","目光回杯口"],"director_intent":"用窗外运动与室内停留形成对照。","shot_reason":"半侧中近景保留玻璃和杯子。","references":["待制作米色外套女子","待制作窗边夜景关键帧"],"image_prompt_en":"Photographic three-quarter medium-close view of an original woman in a beige coat holding a tea cup with her left hand beside a diner window. Red shop-sign light enters from outside at frame left, balanced by a warm pendant above the table. Dry street beyond the glass, restrained reflections, cup and eyes visible. Aspect ratio 16:9.","image_prompt_zh":"米色外套女子左手端杯，窗外红光来自画左招牌，桌上暖吊灯，街面干燥。","end_state":"公交已离开窗面，她仍端杯，目光落回杯口。","video_prompt_zh":"@图片1 参考女子、杯子和窗灯布局。0–4秒：固定半侧中近景，窗外公交从画左驶向画右，她短暂随车看去。4–8秒：公交离开画面，她把目光收回左手杯口。杯子不入口，街面保持干燥，车声远去与店内轻响并存，无对白、无配乐。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作窗边起始帧，普通参考"}],"status":"planned","media_tested":false,"checks":["左手端杯","公交方向一致","无新增雨水","反射不是第二人物","结尾看杯口"],"fallback":"公交细节不稳时保持车体为窗外模糊色块，仍保留经过事件。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.poetic-natural-light","family":"live-action","name":"自然光诗意","aliases":[],"description":"让光、风和人物行动共同构成时间。",
+    "components":{"media":"media.photographic","look":"look.natural","direction":"direction.observational","purpose":"purpose.romance"},
+    "suitable_for":["环境观察","轻微感官变化"],"avoid_when":["精密物件演示需要稳定无风环境"],
+    "character_design":"朴素服装，材质能显现风但不额外飘动。","environment_design":"确认太阳、坡地与树的位置。",
+    "visual_rules":"逆光边缘和地面层次，人物不能被耀斑完全吞没。","motion_rules":"摄影机与风分别有速度，不所有东西同步运动。","sound_rules":"叶声与脚步有距离，无需诗意旁白。","performance_rules":"观察动作自然，不硬加悲伤。",
+    "continuity_anchors":["篮子左手","太阳方向","布只飘一次"],"failure_modes":["耀斑遮掉手：改变取景角，不改动作。"],
+    "example":{"source":"她走到树下停住，风掀起篮上的布，她用右手按回去。","invariants":["走到树下","风掀布","右手按回"],"director_intent":"让一次与风的接触构成完整观察。","shot_reason":"中全景看得清脚步与篮子，不把自然当背景壁纸。","references":["待制作白衬衫女子、左手竹篮","待制作树旁起始帧"],"image_prompt_en":"Photographic medium-wide view of an original woman in a white linen shirt one step before a tree's shade. She holds a wicker basket in her left hand, a cream cloth lying flat over it. Low late-afternoon sunlight from frame right outlines the fabric; the ground and trunk remain readable. Aspect ratio 16:9.","image_prompt_zh":"女子在树荫前一步，左手篮子盖平布，画右低太阳照出边缘。","end_state":"她已停在树下，右手压住布，树叶仍可微动。","video_prompt_zh":"@图片1 参考女子、篮子与太阳方向。0–3秒：固定中全景，她向前一步进入树荫并停住。3–5秒：一阵风掀起篮上的布边。5–8秒：她用右手把布按回篮口，左手仍提篮，树叶继续微动。保留脚步、叶响和布声，无对白、无配乐。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作树旁起始帧，普通参考"}],"status":"planned","media_tested":false,"checks":["先停再掀布","右手按布","篮子不换手","太阳方向稳定","叶动不使人漂移"],"fallback":"布动作不清时拍篮子与右手中景，保留树影说明地点。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.cool-geometric-thriller","family":"live-action","name":"冷峻几何悬疑","aliases":[],"description":"用稳定几何与受控视点保留信息。",
+    "components":{"media":"media.photographic","look":"look.industrial-future","direction":"direction.graphic","purpose":"purpose.suspense"},
+    "suitable_for":["信息等待","秩序中的异常"],"avoid_when":["用户要求热烈即兴观感"],
+    "character_design":"固定轮廓，衣服与背景亮度分离。","environment_design":"真实店铺也可用几何规则，不因组件名称自动加科幻设施。",
+    "visual_rules":"柜台与门框形成限定区，冷光有灯源。","motion_rules":"声音触发小幅推进，端点不能丢掉关键物件。","sound_rules":"门铃位置清楚，不增加恐怖音效暗示新剧情。","performance_rules":"转头有因果，不提前瞪眼。",
+    "continuity_anchors":["钥匙右手","门在东侧","不离柜台"],"failure_modes":["推进丢钥匙：停止推进或改为较宽端点。"],
+    "example":{"source":"夜班店员拿起柜台上的旧钥匙，门铃响，她看向门口，没有离开柜台。","invariants":["拿钥匙","听门铃看门","留在柜台"],"director_intent":"保留门外信息，而不是新增危险事件。","shot_reason":"柜台线条与门框限制视野，铃声使目光改变。","references":["待制作短发蓝针织衫店员","待制作同地理起始关键帧"],"image_prompt_en":"Photographic medium-wide view from the west side of a shop counter. An original short-haired woman in a blue cardigan stands within the rectangle of a door frame behind her. One old brass key lies beside her right hand. The east entrance is at the far right edge. Cool overhead practicals, precise counter lines, restrained grey palette. Aspect ratio 16:9.","image_prompt_zh":"柜台西侧中全景，线条规整，钥匙在右手旁，东入口在画右边缘，冷顶灯。","end_state":"店员右手握钥匙看向画右，机位仍能看见手与柜台边。","video_prompt_zh":"@图片1 参考店员、柜台与入口地理。0–3秒：她右手拿起旧钥匙，摄影机固定。3–5秒：画右门铃响，她转头看入口，摄影机沿柜台外轻微推进。5–8秒：停在仍能看见握钥匙右手的中景，她没有离开柜台。冷顶灯稳定，只有钥匙声、门铃和店内低噪，不加人物、对白或配乐。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作起始关键帧，普通参考"}],"status":"planned","media_tested":false,"checks":["原文四事实保留","未提前转头","无新增人物","右手始终可读","推进未越轴"],"fallback":"推进失败改为固定机位，用转头本身完成注意力变化。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.epic-environment","family":"live-action","name":"史诗环境叙事","aliases":[],"description":"通过人和地标的比例，让环境成为叙事信息。",
+    "components":{"media":"media.photographic","look":"look.epic-fantasy","direction":"direction.classical","purpose":"purpose.scifi-fantasy"},
+    "suitable_for":["到达新地点","尺度揭示"],"avoid_when":["微小道具功能必须全程读清"],
+    "character_design":"用披风色块或轮廓做远景身份锚点。","environment_design":"先定山脊、谷地和目的地，路径不穿山。",
+    "visual_rules":"前景人物、中景山脊、远景建筑三层分开。","motion_rules":"揭示只扩大空间信息，不持续无终点飞行。","sound_rules":"风声与远处声音保留尺度，不默认轰鸣配乐。","performance_rules":"到达与停步清楚，人物不被景观吞没。",
+    "continuity_anchors":["红披风","山脊路线","建筑位置"],"failure_modes":["拉远身份消失：缩短后拉距离，保留色块。"],
+    "example":{"source":"旅人走上山脊停下，看见谷地里的一座白塔。","invariants":["登上山脊","停下","白塔在谷地"],"director_intent":"到达以后才揭示目的地尺度。","shot_reason":"背侧全景逐渐拉宽，把人物与目标放在同一地理中。","references":["待制作红披风旅人","待制作山脊起始帧与白塔环境设计"],"image_prompt_en":"Photographic full view behind an original traveler in a red cloak one step below a rocky ridge. The ridge occupies the lower foreground and hides the valley. Pale morning light from frame left, clear layered mountains beyond, no floating structures. The traveler's boots and path are visible. Aspect ratio 16:9.","image_prompt_zh":"旅人在山脊下方一步，前景遮住谷地，左侧晨光，脚与路线可见。","end_state":"旅人站在山脊，谷底单座白塔在远景，红披风仍可辨。","video_prompt_zh":"@图片1 参考旅人和山脊起点；@图片2 仅参考谷地白塔布局，不复制人物或改光。0–4秒：旅人走上山脊并停下，摄影机保持背侧。4–10秒：摄影机向后上方缓慢拉宽，露出谷地中的一座白塔，人物不再前进。左侧晨光保持，只有风声与停下的脚步，不加旁白、配乐或新建筑。","duration_seconds":10,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作旅人山脊起始帧"},{"token":"@图片2","role":"待制作无人物谷地白塔图，仅布局"}],"status":"planned","media_tested":false,"checks":["先登脊再揭示","白塔只有一座","旅人确实停步","路线不穿山","红披风可辨"],"fallback":"空间拉宽不稳时改为背侧停步镜头加白塔远景，用剪辑建立同一方向。"}
+  }
+]

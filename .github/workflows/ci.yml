@@ -1,0 +1,30 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  skill:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: skills/seedance-25-director
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 -B scripts/validate.py skill .
+      - run: python3 -B scripts/validate.py package assets/examples/narrative-package.json
+      - run: python3 -B -m unittest discover -s tests -v
+
+  content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 -B scripts/validate_repo.py

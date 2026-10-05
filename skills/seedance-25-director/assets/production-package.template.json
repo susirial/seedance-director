@@ -1,0 +1,13 @@
+{
+  "schema_version":1,
+  "project":{"id":"untitled","title":"待命名制作包","purpose":"待确认用途","audience":"待确认受众","language":"zh-CN","total_seconds":null,"aspect_ratio":null,"stage":"draft","model_line":"seedance-2.5","surface":{"name":null,"verified":false,"source":null,"checked_at":null,"operations":[]}},
+  "sources":[],
+  "adaptation_notes":[],
+  "style":{"preset_id":null,"components":{"media":null,"look":null,"direction":null,"purpose":null},"secondary_look":null,"rationale":"待按原文推荐并确认","confirmed":false,"overrides":[],"exceptions":[]},
+  "assets":[],
+  "scenes":[],
+  "shots":[],
+  "keyframes":[],
+  "clips":[],
+  "review":{"media_tested":false,"issues":[]}
+}

@@ -1,0 +1,10 @@
+[
+  {"kind":"component","id":"media.photographic","axis":"media","name":"写实摄影","aliases":["实拍观感"],"description":"以摄影影像的光学、曝光和材质关系组织画面。","rules":["焦段服务空间关系，不堆镜头型号。","皮肤、织物和反射保留自然尺度。"],"compatibility_notes":"允许风格化光色，不因写实自动加入浅景深。"},
+  {"kind":"component","id":"media.cg-realistic","axis":"media","name":"写实三维","aliases":["写实CG"],"description":"以可信几何、材质和运动重量形成三维画面。","rules":["部件比例与接触面稳定。","光照必须与空间结构一致。"],"compatibility_notes":"可用白模控制结构，外观图不应改写运动路径。"},
+  {"kind":"component","id":"media.cg-stylized","axis":"media","name":"风格化三维","aliases":["角色CG"],"description":"简化造型但保留体积与清楚姿态。","rules":["统一头身比例与形变边界。","用轮廓和重心表达动作。"],"compatibility_notes":"夸张不是无重量；避免每镜改变材质体系。"},
+  {"kind":"component","id":"media.cel-2d","axis":"media","name":"二维赛璐璐","aliases":["二维动画"],"description":"清楚线稿、分级阴影、角色与背景分层。","rules":["用构图尺度与透视代替不必要的光圈词。","先写姿态和运动弧线，再选择速度线等强调手法。"],"compatibility_notes":"动画节拍为效果建议，不承诺精确逐帧控制。"},
+  {"kind":"component","id":"media.painted-2d","axis":"media","name":"手绘绘画动画","aliases":["绘画动画"],"description":"以笔触、色块和层次建立形体。","rules":["笔触跟随物体表面。","保留主体轮廓，环境纹理变化不应吞没动作。"],"compatibility_notes":"可承载水墨、水彩与油画，三者需选择主材质。"},
+  {"kind":"component","id":"media.stop-motion","axis":"media","name":"定格与手工材料","aliases":["定格质感"],"description":"模拟有形材料、台景和逐步姿势变化的观感。","rules":["物体保留厚度和接触影。","先写支点与重心，不把随机抖动当定格。"],"compatibility_notes":"不声称使用了真实逐格拍摄工艺。"},
+  {"kind":"component","id":"media.pixel","axis":"media","name":"像素艺术","aliases":["像素风"],"description":"以稳定像素网格和限定色阶表达形体。","rules":["保持角色像素尺度。","移动中不混入平滑写实皮肤与随机抗锯齿。"],"compatibility_notes":"适合明确轮廓，细小文字和复杂材质需简化或后期。"},
+  {"kind":"component","id":"media.motion-graphics","axis":"media","name":"图形动态","aliases":["MG动画"],"description":"用图形关系、排布和时序表达信息。","rules":["先列信息层级，再决定出现顺序。","文字和数字需要精确时交给后期排版。"],"compatibility_notes":"不把无数据支持的图形变化当成事实证据。"}
+]

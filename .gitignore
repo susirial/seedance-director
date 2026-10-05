@@ -1,0 +1,19 @@
+.DS_Store
+
+# 视频成片不进入本仓库
+*.mp4
+*.mov
+*.webm
+*.m4v
+*.mkv
+
+# 密钥与本地环境
+.env
+.env.*
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 内部计划
+.trae/

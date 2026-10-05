@@ -1,0 +1,12 @@
+[
+  {"kind":"component","id":"purpose.drama","axis":"purpose","name":"叙事剧情","aliases":[],"description":"让事件改变人物处境或观众理解。","rules":["追溯每个关键动作的来源。","隐藏信息与揭示次序服从原文。"],"compatibility_notes":"无转折的片刻也可为整体叙事服务。"},
+  {"kind":"component","id":"purpose.romance","axis":"purpose","name":"情感文艺","aliases":[],"description":"通过距离、行为与时间表现情感关系。","rules":["让人物与物件承载情感。","不默认泪水、拥抱和配乐高潮。"],"compatibility_notes":"不能改写用户明确的关系结局。"},
+  {"kind":"component","id":"purpose.suspense","axis":"purpose","name":"悬疑惊悚","aliases":[],"description":"控制观众知道与不知道的信息。","rules":["视点决定何时露出答案。","离画声要有来源或明确创作目的。"],"compatibility_notes":"悬疑不等于加入犯罪、怪物或袭击。"},
+  {"kind":"component","id":"purpose.action-sport","axis":"purpose","name":"动作运动","aliases":[],"description":"让动作方向、接触与结果可读。","rules":["交代发力和落点。","复杂接触先预演或拆镜。"],"compatibility_notes":"不要以运动风格改变既有动作结果。"},
+  {"kind":"component","id":"purpose.scifi-fantasy","axis":"purpose","name":"科幻奇幻","aliases":[],"description":"在虚构规则内保持因果与空间一致。","rules":["新能力或奇观必须来自设定。","先建立尺度再揭示环境。"],"compatibility_notes":"不能用奇幻解释没有交代的穿越与瞬移。"},
+  {"kind":"component","id":"purpose.comedy","axis":"purpose","name":"喜剧","aliases":[],"description":"通过预期与结果的时机差形成笑点。","rules":["留出读懂前提的时间。","停顿服务笑点，不每秒加入新动作。"],"compatibility_notes":"不把原文严肃结局自动改成笑话。"},
+  {"kind":"component","id":"purpose.product","axis":"purpose","name":"产品广告","aliases":[],"description":"证明真实特点并记住产品身份。","rules":["外形、部件、功能必须可追溯。","功能动作与结果对应。"],"compatibility_notes":"没有依据的功效、排名、数据不得发明。"},
+  {"kind":"component","id":"purpose.documentary-education","axis":"purpose","name":"纪实科普","aliases":[],"description":"以可追溯信息帮助理解。","rules":["区分实拍、重现、类比与示意。","数据与机制缺依据时标记待核实。"],"compatibility_notes":"风格化画面不能充当科学或历史证据。"},
+  {"kind":"component","id":"purpose.music-fashion","axis":"purpose","name":"音乐与时尚","aliases":[],"description":"让节奏、形体与材料表达主题。","rules":["动作展示服装或音乐结构。","使用音乐前核对授权。"],"compatibility_notes":"不能只靠快切掩盖没有内容关系。"},
+  {"kind":"component","id":"purpose.vertical-drama","axis":"purpose","name":"竖屏短剧","aliases":[],"description":"在窄画幅中组织人物与信息钩子。","rules":["把关键手部和表情置于可读区域。","钩子来自原文冲突或疑问，不虚构反转。"],"compatibility_notes":"画幅改变需要重排调度，不是直接裁切横屏。"}
+]

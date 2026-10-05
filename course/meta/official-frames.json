@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-04",
+  "note": "官方视频关键帧，不是本项目生成实测。时间为媒体文件时间；仅缩放与JPEG编码，未裁剪、去标识或重新拼接对照。rel 与 used_in 相对 course/。status 为 link_only 的条目没有本地图片。",
+  "rights_note": "用户确认已获允许公开教学引用授权；未独立审核授权书。仅使用少量关键帧，不包含完整视频再分发、转授权或不限用途商业许可。",
+  "items": [
+    {
+      "id": "longtake-02",
+      "title": "后台登台：化妆间",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms8eg74b.mp4",
+      "checked_at": "2026-10-04",
+      "rel": "附录/图/seedance25-longtake-02.jpg",
+      "timestamp_seconds": 2,
+      "caption": "官方案例关键帧，媒体00:02。镜框与帘幕包围镜前歌手。",
+      "teaching_point": "先建立演出前的私人空间。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md"
+      ],
+      "rights_basis": "用户确认已获允许公开教学引用授权；未独立审核授权书",
+      "status": "included"
+    },
+    {
+      "id": "longtake-14",
+      "title": "后台登台：通道交接",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms8eg74b.mp4",
+      "checked_at": "2026-10-04",
+      "rel": "附录/图/seedance25-longtake-14.jpg",
+      "timestamp_seconds": 14,
+      "caption": "官方案例关键帧，媒体00:14。工作人员在后台通道递麦。",
+      "teaching_point": "空间移动同时带来具体任务与人物关系。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md",
+        "05-运镜/教学/L05-08-一镜到底与长镜头调度.md"
+      ],
+      "rights_basis": "用户确认已获允许公开教学引用授权；未独立审核授权书",
+      "status": "included"
+    },
+    {
+      "id": "longtake-29",
+      "title": "后台登台：全场揭示",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms8eg74b.mp4",
+      "checked_at": "2026-10-04",
+      "rel": "附录/图/seedance25-longtake-29.jpg",
+      "timestamp_seconds": 29,
+      "caption": "官方案例关键帧，媒体00:29。歌手背后的舞台与观众全场。",
+      "teaching_point": "画面尺度与人物面对的关系一起扩大。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md"
+      ],
+      "rights_basis": "用户确认已获允许公开教学引用授权；未独立审核授权书",
+      "status": "included"
+    },
+    {
+      "id": "whitebox-02",
+      "title": "白模转幻想短片：空间占位",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms89imyw.mp4",
+      "checked_at": "2026-10-04",
+      "rel": "附录/图/seedance25-whitebox-02.jpg",
+      "timestamp_seconds": 2,
+      "caption": "官方案例关键帧，媒体00:02。保留官方片头布局的几何体白模展示。",
+      "teaching_point": "粗几何体即可预演主体与空间，不需先制作精细场景。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md"
+      ],
+      "rights_basis": "用户确认已获允许公开教学引用授权；未独立审核授权书",
+      "status": "included"
+    },
+    {
+      "id": "whitebox-17",
+      "title": "白模转幻想短片：结构与外观",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms89imyw.mp4",
+      "checked_at": "2026-10-04",
+      "rel": "附录/图/seedance25-whitebox-17.jpg",
+      "timestamp_seconds": 17,
+      "caption": "官方案例关键帧，媒体00:17。左侧几何结构与右侧水下幻想场景的官方并排展示。",
+      "teaching_point": "比较主体与大型遮挡物的关系；静态图不验证运动轨迹。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md",
+        "06-镜头语言综合与分镜/教学/L06-04-分镜表与场面调度.md"
+      ],
+      "rights_basis": "用户确认已获允许公开教学引用授权；未独立审核授权书",
+      "status": "included"
+    },
+    {
+      "id": "whitebox-25",
+      "title": "白模转幻想短片：动作目标",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms89imyw.mp4",
+      "checked_at": "2026-10-04",
+      "rel": "附录/图/seedance25-whitebox-25.jpg",
+      "timestamp_seconds": 25,
+      "caption": "官方案例关键帧，媒体00:25。简化人形与星空角色伸手节点的官方并排展示。",
+      "teaching_point": "白模交代目标位置，外观参考补充角色、服装与环境。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md"
+      ],
+      "rights_basis": "用户确认已获允许公开教学引用授权；未独立审核授权书",
+      "status": "included"
+    },
+    {
+      "id": "greenscreen-00",
+      "title": "绿幕训练到赛场：源素材",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms89jtbf.mp4",
+      "checked_at": "2026-10-04",
+      "rel": "附录/图/seedance25-greenscreen-00.jpg",
+      "timestamp_seconds": 0,
+      "caption": "官方案例关键帧，媒体00:00。绿幕上的脚、足球与地面。",
+      "teaching_point": "换景前先标出接触点，动态合理性须观看视频。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md",
+        "08-类型片实战/教学/L08-02-动作.md"
+      ],
+      "rights_basis": "用户确认已获允许公开教学引用授权；未独立审核授权书",
+      "status": "included"
+    },
+    {
+      "id": "greenscreen-06",
+      "title": "绿幕训练到赛场：分阶段指令",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms89jtbf.mp4",
+      "checked_at": "2026-10-04",
+      "rel": "附录/图/seedance25-greenscreen-06.jpg",
+      "timestamp_seconds": 6,
+      "caption": "官方案例关键帧，媒体00:06。官方绿幕编辑指令卡，不是生成画面。",
+      "teaching_point": "环境、障碍、服装和配角分阶段安排；卡内时间不等于媒体时间。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md"
+      ],
+      "rights_basis": "用户确认已获允许公开教学引用授权；未独立审核授权书",
+      "status": "included"
+    },
+    {
+      "id": "greenscreen-12",
+      "title": "绿幕训练到赛场：休息室",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms89jtbf.mp4",
+      "checked_at": "2026-10-04",
+      "rel": "附录/图/seedance25-greenscreen-12.jpg",
+      "timestamp_seconds": 12,
+      "caption": "官方案例关键帧，媒体00:12。运动员在休息室中的换景结果。",
+      "teaching_point": "观察人物姿态与环境光照；与00:00不是同一动作的前后对照。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md"
+      ],
+      "rights_basis": "用户确认已获允许公开教学引用授权；未独立审核授权书",
+      "status": "included"
+    },
+    {
+      "id": "edit-05",
+      "title": "早餐运镜编辑：双人与近景",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms89jxvz.mp4",
+      "checked_at": "2026-10-04",
+      "rel": "附录/图/seedance25-edit-05.jpg",
+      "timestamp_seconds": 5,
+      "caption": "官方案例关键帧，媒体00:05。双人厨房构图与近距离机位的官方并排展示。",
+      "teaching_point": "机位变化改变观众的注意力分配。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md"
+      ],
+      "rights_basis": "用户确认已获允许公开教学引用授权；未独立审核授权书",
+      "status": "included"
+    },
+    {
+      "id": "edit-10",
+      "title": "早餐运镜编辑：餐盘顶视",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms89jxvz.mp4",
+      "checked_at": "2026-10-04",
+      "rel": "附录/图/seedance25-edit-10.jpg",
+      "timestamp_seconds": 10,
+      "caption": "官方案例关键帧，媒体00:10。餐盘的侧面与顶视机位官方并排展示。",
+      "teaching_point": "新机位需要补出不可见空间，保持项仍需复检。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md",
+        "09-毕业项目/教学/L09-02-重拍判断与导演复盘.md"
+      ],
+      "rights_basis": "用户确认已获允许公开教学引用授权；未独立审核授权书",
+      "status": "included"
+    },
+    {
+      "id": "edit-13",
+      "title": "早餐运镜编辑：抛接动作",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms89jxvz.mp4",
+      "checked_at": "2026-10-04",
+      "rel": "附录/图/seedance25-edit-13.jpg",
+      "timestamp_seconds": 13,
+      "caption": "官方案例关键帧，媒体00:13。双人视角与锅的顶视画面的官方并排展示。",
+      "teaching_point": "动作相位与时序需回看视频，不能靠单帧宣称完全一致。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md"
+      ],
+      "rights_basis": "用户确认已获允许公开教学引用授权；未独立审核授权书",
+      "status": "included"
+    },
+    {
+      "id": "extension",
+      "title": "车厢追逐延长",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms89gioe.mp4",
+      "checked_at": "2026-10-04",
+      "rel": null,
+      "timestamp_seconds": null,
+      "caption": "仅提供官方视频链接与方法拆解。",
+      "teaching_point": "接续真实状态与声音。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md"
+      ],
+      "rights_basis": "仅链接官方页面与媒体，未复制本地素材",
+      "status": "link_only",
+      "reason": "连续性重点在动态与声音，按计划不增加静态图。"
+    },
+    {
+      "id": "opera",
+      "title": "京剧环绕与遮挡",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms89gnha.mp4",
+      "checked_at": "2026-10-04",
+      "rel": null,
+      "timestamp_seconds": null,
+      "caption": "仅提供官方视频链接与方法拆解。",
+      "teaching_point": "动作触发摄影机转移与主体交接。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md"
+      ],
+      "rights_basis": "仅链接官方页面与媒体，未复制本地素材",
+      "status": "link_only",
+      "reason": "遮挡与环绕需连续观看，按计划不增加静态图。"
+    },
+    {
+      "id": "ensemble",
+      "title": "多主体音乐会",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms89h7hu.mp4",
+      "checked_at": "2026-10-04",
+      "rel": null,
+      "timestamp_seconds": null,
+      "caption": "仅提供官方视频链接与方法拆解。",
+      "teaching_point": "主体、场景与声部逐项映射。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md"
+      ],
+      "rights_basis": "仅链接官方页面与媒体，未复制本地素材",
+      "status": "link_only",
+      "reason": "素材分工与声部关系以文字和视频讲解，控制配图总量。"
+    },
+    {
+      "id": "product",
+      "title": "汽车装配白模",
+      "source_page": "https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "media_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/4xfa4ms89k8sg.mp4",
+      "checked_at": "2026-10-04",
+      "rel": null,
+      "timestamp_seconds": null,
+      "caption": "仅提供官方视频链接与方法拆解。",
+      "teaching_point": "装配顺序、轨迹与材质分别验收。",
+      "used_in": [
+        "附录/A-04-官方案例与版本差异.md"
+      ],
+      "rights_basis": "仅链接官方页面与媒体，未复制本地素材",
+      "status": "link_only",
+      "reason": "白模方法已有幻想案例配图，产品例保留为链接拓展。"
+    }
+  ]
+}

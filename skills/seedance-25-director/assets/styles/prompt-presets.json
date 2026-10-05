@@ -1,0 +1,493 @@
+{
+  "schema_version": 1,
+  "origin": "技能原创整理，参考用户提供的风格选择截图命名，未生成实测",
+  "usage": {
+    "image": "替换槽位后，将image_prompt_en作为关键帧的风格与画面基础；继续补充人物身份、构图、光源、静态姿态和画幅。",
+    "video": "替换槽位后，将video_prompt_zh放在素材映射之后；继续补充连续时间轴、声音、末态与保持项。",
+    "rule": "只选一个主预设。跨类混合时只添加一个次风格，并明确它只控制色彩、材质或线条中的一个维度。"
+  },
+  "placeholders": {
+    "subject": "主体身份与稳定外观",
+    "scene": "具体空间及地标",
+    "pose": "单一静态姿态",
+    "composition": "景别、视角和画面位置",
+    "lighting": "有来源的光线与色彩",
+    "action": "视频中的可见动作过程",
+    "camera": "摄影机或画面层运动",
+    "sound": "对白、环境声、动作声和音乐",
+    "end_state": "动作完成后的可观察末态",
+    "aspect_ratio": "例如16:9或9:16"
+  },
+  "categories": [
+    {
+      "id": "live-action-realistic",
+      "name": "真人写实",
+      "description": "以可信真人、实景、服化道和摄影光线为基础。用户两张截图识别到的风格均归入本类。",
+      "presets": [
+        {
+          "id": "live.portrait-realism",
+          "name": "人像写实",
+          "aliases": ["真人肖像"],
+          "image_prompt_en": "Photorealistic live-action portrait of {subject} in {scene}, {pose}, {composition}. Natural skin texture, anatomically consistent hands, realistic hair strands and fabric, restrained color, {lighting}. One coherent still moment, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "{subject}位于{scene}，保持{pose}与{composition}；真实皮肤、头发和衣料，光线为{lighting}，只描述一个静止瞬间。",
+          "video_prompt_zh": "真人写实，保持人物五官、发型、服装和空间比例。{action}；摄影机{camera}；光线保持{lighting}；声音为{sound}；结束于{end_state}。避免磨皮、五官漂移和手指变形。",
+          "exclude": ["塑料皮肤", "过度磨皮", "动漫五官", "手指异常", "无来源轮廓光"]
+        },
+        {
+          "id": "live.ancient-realism",
+          "name": "古风写实",
+          "aliases": ["古装写实"],
+          "image_prompt_en": "Photorealistic historical Chinese live-action still of {subject} in {scene}, {pose}, {composition}. Historically coherent layered garments, natural cloth weight, restrained hair ornaments, weathered architecture, {lighting}, no modern objects, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "古风真人实拍观感；{subject}在{scene}中保持{pose}，服饰层次、材质重量和建筑依据统一，构图为{composition}，光线为{lighting}。",
+          "video_prompt_zh": "古风写实，锁定服饰层数、发髻、道具与建筑方向。{action}；摄影机{camera}；衣袖和发丝只随真实动作与环境轻微响应；声音为{sound}；末态{end_state}。不加入现代物件。",
+          "exclude": ["现代服装", "塑料盔甲", "随机仙气粒子", "影楼磨皮", "混乱朝代元素"]
+        },
+        {
+          "id": "live.modern-city",
+          "name": "现代都市",
+          "aliases": ["都市生活"],
+          "image_prompt_en": "Contemporary live-action cinematic still of {subject} in {scene}, {pose}, {composition}. Credible modern wardrobe, real street or interior depth, practical urban light, subtle reflections, {lighting}, natural documentary detail, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "现代都市真人画面；{subject}在{scene}中保持{pose}，真实城市纵深、生活化服装与实用光，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "现代都市写实，保持人物、街道或室内地标不漂移。{action}；摄影机{camera}；城市环境运动与主体动作分层；声音为{sound}；结束于{end_state}。",
+          "exclude": ["默认雨夜", "无来源霓虹", "空泛慢动作", "过度商业磨皮", "路人复制"]
+        },
+        {
+          "id": "live.xianxia-realism",
+          "name": "玄幻修仙",
+          "aliases": ["仙侠写实"],
+          "image_prompt_en": "Photorealistic Chinese xianxia live-action still of {subject} in {scene}, {pose}, {composition}. Tangible layered robes, grounded terrain, atmospheric depth, one controlled supernatural motif, {lighting}, realistic face and material response, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "玄幻修仙真人观感；{subject}在{scene}中保持{pose}，服装与地面有重量，只保留一个有叙事作用的超自然元素，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "写实仙侠，人物动作先遵守重心与空间关系。{action}；摄影机{camera}；特效只响应明确触发，不遮挡脸和手；声音为{sound}；末态{end_state}。",
+          "exclude": ["粒子堆满画面", "无重力漂浮", "塑料服装", "法器复制", "主体被雾吞没"]
+        },
+        {
+          "id": "live.suspense-horror",
+          "name": "悬疑恐怖",
+          "aliases": ["写实悬疑"],
+          "image_prompt_en": "Grounded live-action suspense still of {subject} in {scene}, {pose}, {composition}. Restricted viewpoint, readable negative space, practical motivated shadows, subdued palette, {lighting}, tension from occlusion rather than gore, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "写实悬疑；{subject}在{scene}中保持{pose}，用受限视点、遮挡和负空间控制信息，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "悬疑写实，不新增原文没有的怪物或犯罪事实。{action}；摄影机{camera}；声音{sound}先后关系清楚；保持阴影来源和空间方向；结束于{end_state}。",
+          "exclude": ["无依据怪物", "廉价血浆", "随机闪烁", "疯狂抖镜", "纯黑看不清主体"]
+        },
+        {
+          "id": "live.chinese-classic",
+          "name": "国风古典",
+          "aliases": ["古典雅韵"],
+          "image_prompt_en": "Elegant Chinese classical live-action still of {subject} in {scene}, {pose}, {composition}. Refined but plausible costume, balanced architecture and garden layers, restrained mineral-inspired palette, {lighting}, tactile silk, wood and stone, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "国风古典真人画面；{subject}在{scene}保持{pose}，建筑、园林、衣料与器物层次平衡，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "国风古典，动作克制且对象明确。{action}；摄影机{camera}；保持衣纹、器物和庭院方向；声音为{sound}；末态{end_state}。不以慢动作代替内容。",
+          "exclude": ["影楼布景感", "不合时代物件", "过量飘带", "金色堆砌", "人物悬浮"]
+        },
+        {
+          "id": "live.period-drama",
+          "name": "年代剧",
+          "aliases": ["年代写实"],
+          "image_prompt_en": "Period live-action drama still of {subject} in {scene}, {pose}, {composition}. Era-coherent everyday wardrobe, used furniture and practical objects, natural lived-in texture, {lighting}, restrained film color, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "年代剧写实；{subject}在{scene}中保持{pose}，服装、家具和生活物件属于同一年代，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "年代剧表演克制，先保持年代物件、人物站位和道具归属。{action}；摄影机{camera}；声音为{sound}；结束于{end_state}。",
+          "exclude": ["现代电器", "跨年代服饰", "怀旧滤镜过重", "整洁影棚感", "虚构历史标语"]
+        },
+        {
+          "id": "live.mockumentary",
+          "name": "伪纪录片",
+          "aliases": ["优纪录片", "观察纪录感"],
+          "image_prompt_en": "Observational mockumentary live-action still of {subject} in {scene}, {pose}, {composition}. Available practical light, credible imperfect framing, environmental context, natural skin and wardrobe, {lighting}, no staged glamour, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "伪纪录片观察感；{subject}在{scene}保持{pose}，保留环境上下文和轻微非完美构图，光线{lighting}，不等于随意低质。",
+          "video_prompt_zh": "伪纪录片观察，摄影机只因人物或信息变化而{camera}。完整记录{action}；保留现场声{sound}；不预演夸张表情；结束于{end_state}。",
+          "exclude": ["无理由剧烈手持", "摆拍光环", "商业磨皮", "假采访字幕", "自动加时间码"]
+        },
+        {
+          "id": "live.wuxia",
+          "name": "古风武侠",
+          "aliases": ["写实武侠"],
+          "image_prompt_en": "Grounded Chinese wuxia live-action still of {subject} in {scene}, {pose}, {composition}. Readable fighting stance, practical layered costume, clear weapon ownership and terrain, wind with physical cause, {lighting}, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "古风武侠真人画面；{subject}在{scene}中保持可读的{pose}，兵器归属、脚下地形和服装层次明确，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "写实武侠，动作按预备、发力、接触与停稳组织。{action}；摄影机{camera}；兵器不复制、不穿身；声音为{sound}；结束于{end_state}。",
+          "exclude": ["无重力乱飞", "兵器复制", "动作瞬移", "袖子遮住接触", "满屏速度线"]
+        },
+        {
+          "id": "live.shaw-brothers",
+          "name": "邵氏电影",
+          "aliases": ["复古棚拍武侠"],
+          "image_prompt_en": "1970s Hong Kong studio wuxia-inspired live-action still of {subject} in {scene}, {pose}, {composition}. Deliberate theatrical set, saturated period color, hard studio key and painted depth, visible practical staging, {lighting}, subtle film grain, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "七十年代香港棚拍武侠观感；{subject}在{scene}保持{pose}，舞台化布景、饱和彩色与硬棚灯有意统一，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "复古棚拍武侠，动作轮廓优先。{action}；摄影机采用{camera}；布景和灯位保持舞台逻辑；声音为{sound}；末态{end_state}。只提炼技法，不复制具体影片角色。",
+          "exclude": ["复制知名角色", "现代LED质感", "写实外景与棚景混乱", "数字锐化过重", "兵器穿插"]
+        },
+        {
+          "id": "live.republican-era",
+          "name": "民国剧",
+          "aliases": ["民国写实"],
+          "image_prompt_en": "Republican-era Chinese live-action drama still of {subject} in {scene}, {pose}, {composition}. Era-coherent tailoring, restrained interior decoration, weathered street or residence, {lighting}, muted photographic palette, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "民国剧真人写实；{subject}在{scene}保持{pose}，西装、旗袍或长衫需与具体身份相符，陈设和街景同年代，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "民国剧写实，保持服装版型、人物礼仪、道具和空间关系。{action}；摄影机{camera}；声音{sound}；结束于{end_state}。",
+          "exclude": ["时代混搭", "影楼旗袍模板", "现代玻璃幕墙", "过度泛黄", "无依据军政符号"]
+        },
+        {
+          "id": "live.dark-gothic",
+          "name": "暗黑哥特",
+          "aliases": ["哥特写实"],
+          "image_prompt_en": "Live-action dark Gothic still of {subject} in {scene}, {pose}, {composition}. Tall architectural rhythm, aged stone and dark textile, controlled candle or window light, deep readable shadows, {lighting}, restrained crimson accent, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "暗黑哥特真人画面；{subject}在{scene}保持{pose}，高耸结构、旧石材和深色织物统一，暗部仍可读，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "哥特写实，恐惧来自空间、声音和行为，不默认超自然。{action}；摄影机{camera}；烛火或窗光方向稳定；声音为{sound}；末态{end_state}。",
+          "exclude": ["纯黑无细节", "廉价吸血鬼符号", "无来源红光", "随机蝙蝠", "角色换装"]
+        },
+        {
+          "id": "live.chinese-opulence",
+          "name": "中式华丽",
+          "aliases": ["中式华服"],
+          "image_prompt_en": "Opulent Chinese live-action costume still of {subject} in {scene}, {pose}, {composition}. Intricate but coherent embroidery, controlled jewel tones, lacquered wood and metal details, hierarchy of ornament, {lighting}, face and hands remain readable, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "中式华丽真人画面；{subject}在{scene}保持{pose}，刺绣、漆木和金属细节有层级，不让装饰压过动作，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "中式华丽，锁定纹样位置、首饰数量和服装层次。{action}；摄影机{camera}；材质随动作产生有限高光；声音为{sound}；结束于{end_state}。",
+          "exclude": ["首饰数量漂移", "金色糊满画面", "纹样闪烁", "服装结构变化", "脸被头饰遮挡"]
+        },
+        {
+          "id": "live.ancient-battlefield",
+          "name": "古代战场",
+          "aliases": ["古战场"],
+          "image_prompt_en": "Grounded ancient battlefield live-action still of {subject} in {scene}, {pose}, {composition}. Clear terrain, unit direction and weapon ownership, worn armor materials, controlled dust with visible source, {lighting}, readable foreground action and distant scale, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "古代战场真人写实；{subject}在{scene}保持{pose}，地形、阵列方向、兵器归属和盔甲材质可读，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "古战场镜头先锁定主角、友军方向和地标。{action}；摄影机{camera}；尘土只由脚步、马匹或撞击触发；声音为{sound}；末态{end_state}。",
+          "exclude": ["敌我方向混乱", "武器复制", "无限人海", "尘雾遮满主体", "塑料盔甲"]
+        },
+        {
+          "id": "live.future-scifi",
+          "name": "未来科幻",
+          "aliases": ["写实科幻"],
+          "image_prompt_en": "Photorealistic live-action science-fiction still of {subject} in {scene}, {pose}, {composition}. Functional future technology, coherent interfaces and materials, clear human scale, practical motivated {lighting}, restrained atmosphere, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "未来科幻真人写实；{subject}在{scene}保持{pose}，未来设备有明确功能、尺度和材质，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "写实未来科幻，锁定设备结构、界面位置和空间尺度。{action}；摄影机{camera}；灯光或机械响应有明确触发；声音{sound}；末态{end_state}。",
+          "exclude": ["无功能科技纹", "全屏蓝光", "界面乱码特写", "设备变形", "人物漂浮"]
+        },
+        {
+          "id": "live.chinese-dreamscape",
+          "name": "中式梦境",
+          "aliases": ["东方梦境"],
+          "image_prompt_en": "Photorealistic Chinese dreamscape still of {subject} in {scene}, {pose}, {composition}. Familiar Chinese spatial motifs transformed by one coherent dream rule, soft atmospheric depth, restrained symbolic color, {lighting}, tangible face and fabric, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "中式梦境真人画面；{subject}在{scene}保持{pose}，只采用一个清楚梦境规则改变空间，人物和衣料仍有实体感，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "中式梦境，先保持人物身份、动作与主要地标。{action}；摄影机{camera}；梦境变化只由指定触发发生；声音{sound}；末态{end_state}。",
+          "exclude": ["符号乱炖", "人物液化", "满屏烟雾", "空间无因折叠", "随机古建筑"]
+        },
+        {
+          "id": "live.medieval-fantasy",
+          "name": "中世纪奇幻",
+          "aliases": ["西方奇幻写实"],
+          "image_prompt_en": "Photorealistic medieval fantasy live-action still of {subject} in {scene}, {pose}, {composition}. Grounded stone, timber, leather and metal, coherent costume layers, one controlled magical element, {lighting}, readable terrain and scale, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "中世纪奇幻真人写实；{subject}在{scene}保持{pose}，石、木、皮革和金属材质可信，只保留一个魔法重点，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "中世纪奇幻写实，人物、武器和地形遵守重量与接触。{action}；摄影机{camera}；魔法只响应明确触发；声音{sound}；末态{end_state}。",
+          "exclude": ["塑料盔甲", "魔法粒子堆叠", "武器复制", "无重力动作", "时代混搭"]
+        },
+        {
+          "id": "live.oppressive-thriller",
+          "name": "惊悚压抑",
+          "aliases": ["心理惊悚"],
+          "image_prompt_en": "Oppressive psychological thriller live-action still of {subject} in {scene}, {pose}, {composition}. Compressed spatial layers, controlled off-balance framing, low practical ceiling light, muted color, {lighting}, face and action remain readable, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "惊悚压抑真人画面；{subject}在{scene}保持{pose}，压缩空间层次和轻微失衡构图制造压力，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "心理惊悚，压迫感来自空间距离、等待和声场，不新增怪物。{action}；摄影机{camera}；声音{sound}；保持可读暗部；结束于{end_state}。",
+          "exclude": ["无依据怪物", "剧烈抖镜", "纯黑画面", "随机尖叫", "五官扭曲"]
+        }
+      ]
+    },
+    {
+      "id": "animation-3d",
+      "name": "3D动画",
+      "description": "以三维造型、材质、灯光、重量和接触关系组织画面。",
+      "presets": [
+        {
+          "id": "3d.cinematic-realism",
+          "name": "写实三维电影",
+          "aliases": ["电影CG"],
+          "image_prompt_en": "Cinematic realistic 3D render of {subject} in {scene}, {pose}, {composition}. Stable model proportions, physically plausible materials, grounded contact shadows, {lighting}, detailed but uncluttered environment, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "写实三维；{subject}在{scene}保持{pose}，模型比例、接触影和材质尺度稳定，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "写实三维电影，先保持模型、材质和碰撞体。{action}；摄影机{camera}；运动体现重量与减速；声音{sound}；末态{end_state}。",
+          "exclude": ["漂浮", "穿模", "材质随机变化", "模型比例漂移", "无接触影"]
+        },
+        {
+          "id": "3d.stylized-character",
+          "name": "风格化角色三维",
+          "aliases": ["卡通三维"],
+          "image_prompt_en": "Stylized 3D character frame of {subject} in {scene}, {pose}, {composition}. Consistent head-to-body ratio, simplified expressive shapes, controlled material roughness, readable hands and silhouette, {lighting}, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "风格化三维角色；{subject}在{scene}保持{pose}，头身比、发束和服装色块固定，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "风格化角色三维，姿态和视线先于夸张表情。{action}；摄影机{camera}；保持头身比和手部目标；声音{sound}；末态{end_state}。",
+          "exclude": ["头身比漂移", "巨大空洞眼睛", "手脚融化", "塑料统一高光", "无目标表演"]
+        },
+        {
+          "id": "3d.low-poly",
+          "name": "低多边形",
+          "aliases": ["块面三维"],
+          "image_prompt_en": "Low-poly 3D scene of {subject} in {scene}, {pose}, {composition}. Intentional angular geometry, limited color palette, stable face density, crisp silhouette, simple directional {lighting}, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "低多边形三维；{subject}在{scene}保持{pose}，块面密度和限定色板一致，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "低多边形风格，块面数量和色板不随时间变化。{action}；摄影机{camera}；脚与地面接触清楚；声音{sound}；结束于{end_state}。",
+          "exclude": ["自动细分", "写实皮肤", "几何密度闪变", "脚底打滑", "随机高光"]
+        },
+        {
+          "id": "3d.miniature-toy",
+          "name": "微缩玩具",
+          "aliases": ["玩具世界"],
+          "image_prompt_en": "Miniature toy-world 3D frame of {subject} in {scene}, {pose}, {composition}. Consistent scale cues, tactile wood, fabric or painted resin, tabletop contact, soft studio {lighting}, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "微缩玩具三维；{subject}在{scene}保持{pose}，玩偶、道具和台景比例明确，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "微缩玩具世界，动作幅度符合短肢体和小道具重量。{action}；摄影机{camera}；保持比例与接触；声音{sound}；末态{end_state}。",
+          "exclude": ["比例漂移", "真实人皮", "巨大撞击声", "无重力滑动", "台景随机扩张"]
+        }
+      ]
+    },
+    {
+      "id": "anime-2d",
+      "name": "二次元",
+      "description": "以线稿、色块、赛璐璐阴影和姿态关键点组织二维动画。",
+      "presets": [
+        {
+          "id": "anime.fresh-youth",
+          "name": "清新青春",
+          "aliases": ["日系清新"],
+          "image_prompt_en": "Hand-drawn 2D cel anime frame of {subject} in {scene}, {pose}, {composition}. Clean line art, stable facial design, two-step soft cel shading, fresh restrained palette, layered painted background, {lighting}, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "清新二维；{subject}在{scene}保持{pose}，线稿、五官设计和服装色块稳定，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "清新二次元，保持线稿粗细、色阶和背景地标。{action}；画面层或镜头{camera}；声音{sound}；末态{end_state}。",
+          "exclude": ["转成三维", "写实毛孔", "线稿闪烁", "五官漂移", "背景重画"]
+        },
+        {
+          "id": "anime.action-cel",
+          "name": "热血动作",
+          "aliases": ["动作番"],
+          "image_prompt_en": "Dynamic hand-drawn 2D cel action frame of {subject} in {scene}, {pose}, {composition}. Strong readable silhouette, clear center of gravity, angular shadows, controlled foreshortening, no speed lines before motion, {lighting}, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "热血二维动作；{subject}在{scene}保持明确重心的{pose}，动作轮廓和落点可读，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "热血二维，按预备、爆发、接触、缓冲和停稳组织{action}；镜头{camera}；速度线仅在高速阶段出现；声音{sound}；末态{end_state}。",
+          "exclude": ["瞬移", "全程速度线", "关节反折", "主体裁切", "落点消失"]
+        },
+        {
+          "id": "anime.retro-cel",
+          "name": "复古赛璐璐",
+          "aliases": ["复古手绘"],
+          "image_prompt_en": "Retro hand-painted cel anime frame of {subject} in {scene}, {pose}, {composition}. Limited color steps, stable dark outlines, hand-painted background, subtle analog grain, {lighting}, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "复古赛璐璐；{subject}在{scene}保持{pose}，有限色阶、稳定轮廓和手绘背景，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "复古手绘二维，姿态阶段清楚，不用抖动冒充手绘。{action}；画面{camera}；声音{sound}；结束于{end_state}。",
+          "exclude": ["随机闪线", "数字锐化", "三维皮肤", "颗粒遮动作", "背景漂移"]
+        },
+        {
+          "id": "anime.graphic-comic",
+          "name": "漫画图形",
+          "aliases": ["黑白漫画"],
+          "image_prompt_en": "Single-panel graphic comic illustration of {subject} in {scene}, {pose}, {composition}. Bold black shapes, controlled halftone, crisp silhouette, deliberate negative space, {lighting}, no text or extra panels, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "单幅图形漫画；{subject}在{scene}保持{pose}，黑色块、网点和负空间服务信息，构图{composition}，无文字分格。",
+          "video_prompt_zh": "漫画图形风格，以姿态和构图切换完成{action}；镜头或画面层{camera}；声音{sound}；末态{end_state}；文字交给后期。",
+          "exclude": ["随机分格", "乱码拟声字", "灰阶糊成一片", "无因形变", "额外人物"]
+        }
+      ]
+    },
+    {
+      "id": "photographic-art",
+      "name": "摄影艺术",
+      "description": "以真实摄影媒介为基础，强调胶片、光线、曝光、镜头距离和暗房语言。",
+      "presets": [
+        {
+          "id": "photo.film-documentary",
+          "name": "胶片纪实",
+          "aliases": ["街头胶片"],
+          "image_prompt_en": "Documentary 35mm film photograph of {subject} in {scene}, {pose}, {composition}. Available light, candid spatial context, restrained grain, gentle highlight roll-off, realistic color response, {lighting}, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "35毫米胶片纪实；{subject}在{scene}保持{pose}，环境上下文和自然曝光优先，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "胶片纪实摄影感，保持自然曝光和有限颗粒。完整观察{action}；摄影机{camera}；现场声{sound}；末态{end_state}。",
+          "exclude": ["重度漏光", "颗粒遮脸", "假时间戳", "HDR过强", "摆拍时尚姿势"]
+        },
+        {
+          "id": "photo.monochrome-fine-art",
+          "name": "黑白艺术摄影",
+          "aliases": ["黑白肖像"],
+          "image_prompt_en": "Fine-art black-and-white photograph of {subject} in {scene}, {pose}, {composition}. Rich midtones, controlled deep blacks, sculpted directional {lighting}, tactile texture, clear subject separation, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "黑白艺术摄影；{subject}在{scene}保持{pose}，中间调、暗部层次和材质可读，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "黑白摄影艺术，亮度关系不跳变。{action}；摄影机{camera}；保持主体与背景分离；声音{sound}；结束于{end_state}。",
+          "exclude": ["死黑无层次", "局部彩色", "银色塑料皮肤", "过曝轮廓", "随机胶片划痕"]
+        },
+        {
+          "id": "photo.low-key-editorial",
+          "name": "低调光编辑摄影",
+          "aliases": ["戏剧棚拍"],
+          "image_prompt_en": "Low-key editorial photograph of {subject} in {scene}, {pose}, {composition}. One motivated key light, negative fill, controlled specular detail, deep readable background, {lighting}, elegant restrained color, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "低调光编辑摄影；{subject}在{scene}保持{pose}，主光和负补光明确，暗部仍可读，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "低调光摄影，人物或产品移动时保持主光方向。{action}；摄影机{camera}；高光不漂移；声音{sound}；末态{end_state}。",
+          "exclude": ["无来源轮廓光", "纯黑背景吞主体", "高光爆白", "全程烟雾", "肤色偏灰"]
+        },
+        {
+          "id": "photo.dreamlike-long-exposure",
+          "name": "梦幻长曝光",
+          "aliases": ["实验摄影"],
+          "image_prompt_en": "Dreamlike long-exposure fine-art photograph of {subject} in {scene}, {pose}, {composition}. Main subject retains one sharp identity anchor, selected environmental light trails show time, controlled motion blur, {lighting}, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "梦幻长曝光；{subject}在{scene}保持一个清晰身份锚点，只有指定环境运动形成光轨或拖影，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "长曝光摄影意象仅控制光轨和环境残影，主体动作仍清楚。{action}；摄影机{camera}；声音{sound}；末态{end_state}。",
+          "exclude": ["整个人脸糊掉", "所有物体拖影", "无来源光轨", "身份复制", "随机曝光跳变"]
+        }
+      ]
+    },
+    {
+      "id": "illustration-art",
+      "name": "插画艺术",
+      "description": "以数字绘画、编辑插画、概念设计和图形语言组织单幅与动画。",
+      "presets": [
+        {
+          "id": "illustration.editorial",
+          "name": "编辑插画",
+          "aliases": ["叙事插画"],
+          "image_prompt_en": "Editorial illustration of {subject} in {scene}, {pose}, {composition}. Clear visual metaphor grounded in the supplied text, simplified shapes, controlled palette, strong hierarchy, {lighting}, no invented claims, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "编辑插画；{subject}在{scene}保持{pose}，图形隐喻必须来自原文，构图{composition}，色彩与光线{lighting}。",
+          "video_prompt_zh": "编辑插画动画，只让与信息有关的层移动。{action}；画面层{camera}；声音{sound}；结束于{end_state}；不新增事实。",
+          "exclude": ["空泛符号堆砌", "无来源文字", "信息层级混乱", "随机物件", "装饰压过主体"]
+        },
+        {
+          "id": "illustration.storybook",
+          "name": "绘本插画",
+          "aliases": ["童话绘本"],
+          "image_prompt_en": "Painterly storybook illustration of {subject} in {scene}, {pose}, {composition}. Simplified expressive forms, layered environment, warm paper texture, coherent limited palette, {lighting}, readable path and landmarks, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "绘本插画；{subject}在{scene}保持{pose}，角色轮廓、路径与地标清楚，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "绘本动画，角色真实走动，背景分层移动。{action}；画面{camera}；声音{sound}；结束于{end_state}。",
+          "exclude": ["角色滑行", "背景吞没主体", "颜色逐帧漂移", "随机魔法元素", "纸纹闪烁"]
+        },
+        {
+          "id": "illustration.concept-art",
+          "name": "电影概念插画",
+          "aliases": ["概念设计"],
+          "image_prompt_en": "Cinematic concept illustration of {subject} in {scene}, {pose}, {composition}. Functional environment design, clear scale anchors, atmospheric depth, controlled focal hierarchy, {lighting}, production-ready shape language, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "电影概念插画；{subject}在{scene}保持{pose}，空间功能、尺度锚点和地标可执行，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "概念插画动态化时保持建筑、路径和尺度。{action}；摄影机或画面层{camera}；声音{sound}；末态{end_state}。",
+          "exclude": ["只画氛围不画地理", "尺度混乱", "路径穿墙", "主体过小", "细节噪声"]
+        },
+        {
+          "id": "illustration.vector-graphic",
+          "name": "矢量图形插画",
+          "aliases": ["扁平插画"],
+          "image_prompt_en": "Flat vector-style illustration of {subject} in {scene}, {pose}, {composition}. Crisp geometric shapes, limited palette, consistent stroke system, clear negative space, {lighting}, no gradients unless specified, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "矢量图形插画；{subject}在{scene}保持{pose}，几何形、描边体系和负空间统一，构图{composition}，色光{lighting}。",
+          "video_prompt_zh": "矢量图形动画，每个形状有明确路径和终点。{action}；画面{camera}；声音{sound}；结束于{end_state}。",
+          "exclude": ["额外形状", "描边粗细漂移", "随机渐变", "几何互穿", "文字乱码"]
+        }
+      ]
+    },
+    {
+      "id": "punk-art",
+      "name": "朋克艺术",
+      "description": "按技术系统、材料和社会空间区分朋克类型，不只叠加霓虹。",
+      "presets": [
+        {
+          "id": "punk.cyberpunk",
+          "name": "赛博朋克",
+          "aliases": ["霓虹未来"],
+          "image_prompt_en": "Grounded cyberpunk visual of {subject} in {scene}, {pose}, {composition}. Dense but legible urban infrastructure, practical neon signage as light sources, worn high-tech materials, wet surfaces only if specified, {lighting}, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "赛博朋克；{subject}在{scene}保持{pose}，高技术与生活磨损并存，霓虹必须有光源，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "赛博朋克，保持街区地理、设备功能和人物身份。{action}；摄影机{camera}；广告光只影响相应表面；声音{sound}；末态{end_state}。",
+          "exclude": ["默认雨夜", "乱码招牌", "全屏紫青", "设备无功能", "霓虹吞肤色"]
+        },
+        {
+          "id": "punk.steampunk",
+          "name": "蒸汽朋克",
+          "aliases": ["维多利亚机械"],
+          "image_prompt_en": "Steampunk visual of {subject} in {scene}, {pose}, {composition}. Functional brass, iron, leather and pressure systems, visible mechanical joints, restrained Victorian-inspired tailoring, motivated warm {lighting}, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "蒸汽朋克；{subject}在{scene}保持{pose}，黄铜、钢铁、皮革和压力机构有功能关系，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "蒸汽朋克，机械运动沿轴、齿轮或活塞传递。{action}；摄影机{camera}；蒸汽由阀门或压力释放触发；声音{sound}；末态{end_state}。",
+          "exclude": ["齿轮贴纸", "蒸汽凭空出现", "机构互穿", "现代塑料", "维多利亚符号乱堆"]
+        },
+        {
+          "id": "punk.dieselpunk",
+          "name": "柴油朋克",
+          "aliases": ["工业复古未来"],
+          "image_prompt_en": "Dieselpunk visual of {subject} in {scene}, {pose}, {composition}. Heavy riveted machinery, oil-stained steel, analog instruments, aerodynamic interwar forms, smoky industrial {lighting} with readable silhouettes, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "柴油朋克；{subject}在{scene}保持{pose}，铆接钢板、模拟仪表和重型机械统一，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "柴油朋克，动作体现设备重量和机械惯性。{action}；摄影机{camera}；烟只来自排气或工业源；声音{sound}；末态{end_state}。",
+          "exclude": ["轻飘机械", "纯赛博霓虹", "无来源浓烟", "仪表乱码特写", "塑料铆钉"]
+        },
+        {
+          "id": "punk.solarpunk",
+          "name": "太阳朋克",
+          "aliases": ["生态未来"],
+          "image_prompt_en": "Solarpunk visual of {subject} in {scene}, {pose}, {composition}. Climate-adapted architecture, visible renewable systems, integrated vegetation with maintenance logic, bright natural {lighting}, humane public space, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "太阳朋克；{subject}在{scene}保持{pose}，可再生能源、遮阳、通风与植物维护逻辑可见，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "太阳朋克，环境系统按风、光、水或人流响应。{action}；摄影机{camera}；植物不无因疯长；声音{sound}；末态{end_state}。",
+          "exclude": ["只加绿植", "漂浮建筑", "无功能太阳能板", "过曝白城", "植物穿墙"]
+        }
+      ]
+    },
+    {
+      "id": "traditional-fine-art",
+      "name": "传统美术",
+      "description": "以具体画种的材料、笔法、空间和色彩规则转译镜头。",
+      "presets": [
+        {
+          "id": "traditional.ink-wash",
+          "name": "水墨留白",
+          "aliases": ["国画水墨"],
+          "image_prompt_en": "Chinese ink-wash painting of {subject} in {scene}, {pose}, {composition}. Warm rice paper, dry and wet brush hierarchy, three ink densities, deliberate blank space, clear subject contour, {lighting} translated into ink value, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "水墨留白；{subject}在{scene}保持{pose}，宣纸、干湿笔和三层墨色组织空间，构图{composition}，光线转为{lighting}的墨色关系。",
+          "video_prompt_zh": "水墨动态只让指定水面、云气或笔触变化，主体轮廓不溶化。{action}；画面{camera}；声音{sound}；末态{end_state}。",
+          "exclude": ["主体融化", "全屏墨晕", "随机书法", "地理消失", "伪3D塑料感"]
+        },
+        {
+          "id": "traditional.gongbi",
+          "name": "工笔设色",
+          "aliases": ["工笔重彩"],
+          "image_prompt_en": "Chinese gongbi fine-line painting of {subject} in {scene}, {pose}, {composition}. Controlled fine outlines, layered mineral colors, stable textile and object patterns, planar depth, {lighting} translated into restrained tonal layering, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "工笔设色；{subject}在{scene}保持{pose}，细线、层染、衣纹和器物形制稳定，构图{composition}，光线转为{lighting}的色层。",
+          "video_prompt_zh": "工笔动态克制，线条与纹样不随动作游走。{action}；画面{camera}；声音{sound}；结束于{end_state}。",
+          "exclude": ["纹样闪烁", "油画厚涂", "线条断裂", "器物变形", "随机金粉"]
+        },
+        {
+          "id": "traditional.dunhuang-mural",
+          "name": "敦煌壁画",
+          "aliases": ["壁画重彩"],
+          "image_prompt_en": "Dunhuang mural-inspired illustration of {subject} in {scene}, {pose}, {composition}. Mineral pigment palette, aged plaster texture, rhythmic contour lines, flattened sacred spatial order, restrained decorative clouds, {lighting} expressed through color hierarchy, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "敦煌壁画技法启发；{subject}在{scene}保持{pose}，矿物色、旧壁肌理、线描节奏和平面秩序统一，构图{composition}。",
+          "video_prompt_zh": "壁画动态保持平面色层与线描，动作沿既定姿态路径发生。{action}；画面{camera}；声音{sound}；末态{end_state}。尊重文化语境，不随意拼贴宗教符号。",
+          "exclude": ["宗教符号乱用", "金粉堆叠", "立体塑料皮肤", "壁裂随机闪动", "飞天元素无依据"]
+        },
+        {
+          "id": "traditional.woodblock",
+          "name": "木版画",
+          "aliases": ["木刻版画"],
+          "image_prompt_en": "Traditional woodblock print of {subject} in {scene}, {pose}, {composition}. Carved line rhythm, limited registered colors, visible paper grain, bold silhouette, intentional flat overlap, {lighting} expressed as carved value shapes, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "木版画；{subject}在{scene}保持{pose}，刻线节奏、套色和纸纹稳定，构图{composition}，光线转为{lighting}的明暗块。",
+          "video_prompt_zh": "木版画动态保持套色和刻线配准。{action}；画面层{camera}；声音{sound}；结束于{end_state}。",
+          "exclude": ["套色随机错位", "渐变塑料感", "线条粗细乱跳", "照片纹理直贴", "额外文字印章"]
+        }
+      ]
+    },
+    {
+      "id": "craft-art",
+      "name": "工艺美术",
+      "description": "以纸、黏土、纤维、漆、金属和陶瓷等具体材料及工艺限制设计画面。",
+      "presets": [
+        {
+          "id": "craft.paper-cut",
+          "name": "剪纸层叠",
+          "aliases": ["纸雕"],
+          "image_prompt_en": "Layered paper-cut craft scene of {subject} in {scene}, {pose}, {composition}. Visible paper thickness, clean cut edges, stable layer order, soft cast shadows, limited colored paper palette, {lighting}, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "剪纸层叠；{subject}在{scene}保持{pose}，纸张厚度、切边和层次顺序清楚，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "剪纸动画只按纸片滑移、铰接或层间位移。{action}；画面{camera}；声音{sound}；末态{end_state}。",
+          "exclude": ["纸层互穿", "变成真人皮肤", "软体扭曲", "切边闪烁", "随机纸屑"]
+        },
+        {
+          "id": "craft.clay",
+          "name": "黏土定格",
+          "aliases": ["黏土动画"],
+          "image_prompt_en": "Clay stop-motion-style craft scene of {subject} in {scene}, {pose}, {composition}. Stable puppet proportions, tactile fingerprints, miniature set scale, grounded feet and props, soft studio {lighting}, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "黏土定格质感；{subject}在{scene}保持{pose}，偶形比例、指压痕和台景尺度稳定，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "黏土定格观感，姿态分步变化，只有指定软材料变形。{action}；摄影机{camera}；声音{sound}；末态{end_state}。",
+          "exclude": ["人物融化", "全画面抖动", "眼鼻漂移", "脚离地", "冒充真实逐格拍摄"]
+        },
+        {
+          "id": "craft.embroidery",
+          "name": "刺绣纤维",
+          "aliases": ["织物刺绣"],
+          "image_prompt_en": "Embroidery textile artwork of {subject} in {scene}, {pose}, {composition}. Visible thread direction, layered stitches, woven fabric ground, controlled thread sheen, clear stitched contours, {lighting}, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "刺绣纤维画面；{subject}在{scene}保持{pose}，针脚方向、线层和织物底稳定，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "刺绣风格动态保持针脚贴合形体，不让线头随机生长。{action}；画面层{camera}；声音{sound}；结束于{end_state}。",
+          "exclude": ["针脚方向乱跳", "线头无限生长", "变成油画", "轮廓脱线", "布纹闪烁"]
+        },
+        {
+          "id": "craft.cloisonne",
+          "name": "景泰蓝",
+          "aliases": ["掐丝珐琅"],
+          "image_prompt_en": "Cloisonne enamel craft artwork of {subject} in {scene}, {pose}, {composition}. Fine metal-wire cells, luminous enamel colors, controlled gold outlines, polished but material-specific reflections, {lighting}, aspect ratio {aspect_ratio}.",
+          "image_prompt_zh": "景泰蓝工艺；{subject}在{scene}保持{pose}，掐丝边界、珐琅色块和金属反射有工艺逻辑，构图{composition}，光线{lighting}。",
+          "video_prompt_zh": "景泰蓝风格，掐丝边界与珐琅分区锁定。{action}；摄影机或画面{camera}；高光随角度有限移动；声音{sound}；末态{end_state}。",
+          "exclude": ["金线漂移", "珐琅溢出边界", "塑料高光", "纹样随机增加", "整画面液化"]
+        }
+      ]
+    }
+  ]
+}

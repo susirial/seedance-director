@@ -1,0 +1,34 @@
+{
+  "model_line":"seedance-2.5",
+  "checked_at":"2026-10-04",
+  "sources":{
+    "model":"https://seed.bytedance.com/zh/seedance2_5",
+    "release":"https://seed.bytedance.com/zh/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+    "guide":"https://www.volcengine.com/docs/82379/2607689"
+  },
+  "limits":{
+    "generation_seconds":30,
+    "images":30,
+    "videos":10,
+    "audios":10,
+    "total_assets":50,
+    "video_seconds":30,
+    "audio_seconds":30
+  },
+  "limit_source":"guide",
+  "timestamp_unit_seconds":1,
+  "extension":{
+    "documented_depth":2,
+    "model_page_wording":"支持两次延长",
+    "release_wording":"多轮延长",
+    "note":"不得解释为无限延长。入口操作与计数口径仍需核实。"
+  },
+  "task_notes":{
+    "first_last_frame":"真实指定输入，两图比例一致，输出比例随首帧。",
+    "edit":"沿用源时长与比例，修改范围位于源片时间内，范围外需复检。",
+    "extend":"新增时长与源时长分列；返回完整结果还是新增段须核实。",
+    "reference_to_video":"语义参考不等于像素锁定。"
+  },
+  "unknown":["入口最短时长和可选时长集合","分辨率与编码选项","价格","API模型ID与端点","特定入口的素材审核与任务权限"],
+  "boundary":"这是有日期的模型资料，不证明任何具体入口当前支持所有能力。"
+}

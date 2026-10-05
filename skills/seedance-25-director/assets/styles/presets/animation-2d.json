@@ -1,0 +1,56 @@
+[
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.cel-youth","family":"animation-2d","name":"清新青春二维","aliases":["日系清新二维"],"description":"以清楚线稿、生活背景与微动作组织关系。",
+    "components":{"media":"media.cel-2d","look":"look.natural","direction":"direction.intimate","purpose":"purpose.drama"},
+    "suitable_for":["生活片段","细微注意力变化"],"avoid_when":["需要真实材质检验，改用摄影或写实三维"],
+    "character_design":"发型外轮廓、衣服色块、眼形固定。","environment_design":"生活背景分前中后层，地标不随动作重画。",
+    "visual_rules":"干净线条、两级阴影，手与脸同时可读，不机械套光圈。","motion_rules":"动作从明确姿势到明确姿势，必要时以背景层位移表现空间。","sound_rules":"日常物件声与停顿，不自动添加青春配乐。","performance_rules":"目光与手的微动，不把所有情绪夸张成大眼泪。",
+    "continuity_anchors":["蓝针织衫色块","右手钥匙","入口画右"],"failure_modes":["漂成三维：明确平面色阶和线条，不加写实皮肤词。"],
+    "example":{"source":"夜班店员拿起柜台上的旧钥匙，门铃响，她看向门口，没有离开柜台。","invariants":["拿钥匙","铃后看门","不离柜台"],"director_intent":"同一生活事件由姿态变化表达，不增加新剧情。","shot_reason":"中全景让手、头和门口保持同一画面关系。","references":["待制作短发蓝衫角色图","待制作北柜台东入口背景，据此制单幅起始帧"],"image_prompt_en":"Hand-drawn 2D cel illustration, medium-wide layout from the west end of a shop counter. An original short-haired woman in a blue cardigan stands behind it, right hand beside one brass key. The east entrance sits at frame right. Clean thin outlines, two-tone cool overhead shadows, painted background layers, readable hands and doorway. Aspect ratio 16:9.","image_prompt_zh":"二维中全景，蓝衫店员右手在钥匙旁，画右入口，细线与两级冷顶光阴影。","end_state":"店员右手握钥匙，转头看向画右，身体仍在柜台后。","video_prompt_zh":"@图片1 参考角色线稿、服装色块、柜台布局与起始姿态。保持手绘二维与两级阴影。0–3秒：固定中全景，店员右手拿起旧钥匙。3–5秒：画右门铃响，她转头看门口。5–8秒：保持站位，右手仍握钥匙，背景层不移动。声音为钥匙轻响、门铃和店内低噪，无对白、无配乐，不切镜。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作单幅二维起始帧，普通参考"}],"status":"planned","media_tested":false,"checks":["线稿粗细稳定","右手拿钥匙","先铃后转头","东入口不换边","没有离柜台"],"fallback":"手部不清时扩大手与钥匙的画面占比，保留面部与门的关系。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.cel-action","family":"animation-2d","name":"热血动作二维","aliases":[],"description":"通过蓄力、重心转移与动作落点制造力量。",
+    "components":{"media":"media.cel-2d","look":"look.pastel-geometric","direction":"direction.kinetic","purpose":"purpose.action-sport"},
+    "suitable_for":["短动作","运动表现"],"avoid_when":["依靠表面字样识别物件，需独立静态镜头"],
+    "character_design":"轮廓简明，运动服主色和护具位置稳定。","environment_design":"地面、障碍、落点先定位。",
+    "visual_rules":"动作剪影与运动方向清楚，形变不改变身份。","motion_rules":"预备、爆发、跟随、停稳；速度线只辅助，不替代动作。","sound_rules":"脚步、风切、落地声随动作，不保证精确单帧卡点。","performance_rules":"视线看落点，身体重心先于腾空。",
+    "continuity_anchors":["黄色夹克","向画右运动","箱子仅一个"],"failure_modes":["瞬移越箱：减少高度与速度，补预备姿势。"],
+    "example":{"source":"运动员向右跨过一只低箱，落地后停稳。","invariants":["向右跨箱","落地","停稳"],"director_intent":"让跨越的重量与完成态可读。","shot_reason":"侧面全身画面同时容纳起跳、箱和落点。","references":["待制作黄夹克原创运动员","待制作低箱侧面起始帧"],"image_prompt_en":"Hand-drawn 2D cel action layout, full-body side view. An original athlete in a yellow jacket and dark trousers stands left of one low blue box, knees flexed, gaze toward the clear landing area on the right. Crisp silhouette, angular two-tone shadows, pale training-ground background, no speed lines yet. Aspect ratio 16:9.","image_prompt_zh":"侧面全身，黄夹克运动员在蓝色低箱左侧屈膝，右侧落点留空。","end_state":"运动员在箱右侧双脚落地停稳，箱仍在后方。","video_prompt_zh":"@图片1 参考运动员造型和低箱位置。手绘二维动作。0–2秒：侧面全身固定构图，他屈膝准备。2–5秒：向画右跨过低箱，身体轮廓清楚，少量背景速度线仅在跨越时出现。5–8秒：脚落地、膝盖缓冲后站稳，衣角短暂跟随再落下。脚步与落地声对应，无对白、无配乐，不切镜。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作侧面全身起始帧"}],"status":"planned","media_tested":false,"checks":["右向不变","没有穿箱","身体未被裁掉","落地后缓冲","速度线及时结束"],"fallback":"跨越不稳时降低箱高，或分起跨和落地两镜，仍保留动作因果。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.retro-cel","family":"animation-2d","name":"复古手绘赛璐璐","aliases":[],"description":"用有限色阶和绘制背景建立旧式手绘观感。",
+    "components":{"media":"media.cel-2d","look":"look.archival-film","direction":"direction.classical","purpose":"purpose.drama"},
+    "suitable_for":["怀旧叙事","停顿与动作交替"],"avoid_when":["仅靠颗粒模仿年代而忽略物件依据"],
+    "character_design":"眼形与发束数量稳定，衣服用有限色阶。","environment_design":"手绘背景质地细于角色色块，年代物件另核对。",
+    "visual_rules":"轮廓略有手绘起伏，但不随机闪线。","motion_rules":"保持背景，角色动作分段清楚；不承诺真实逐格工艺。","sound_rules":"纸、机械声的节奏服务事件。","performance_rules":"姿态停留是选择，不等于卡顿。",
+    "continuity_anchors":["绿衬衫","信盒方向","一封信"],"failure_modes":["颗粒掩盖动作：降低纹理强度，保持角色线条。"],
+    "example":{"source":"青年把一封信放进桌上的木盒，盖上盒盖。","invariants":["一封信入盒","盖上盒盖"],"director_intent":"完整展示一个收纳动作，不发明离别故事。","shot_reason":"斜上中景能看信与盒口。","references":["待制作绿衬衫青年","待制作桌面木盒起始帧"],"image_prompt_en":"Retro hand-drawn cel illustration with a painted room background. An original young man in a muted green shirt holds one cream letter in his right hand above an open wooden box. Three-quarter high medium view shows the box opening and hinged lid behind it. Warm desk-lamp light, limited color steps, subtle grain, stable dark outlines. Aspect ratio 16:9.","image_prompt_zh":"斜上中景，绿衬衫青年右手持信在开盒上方，暖台灯、有限色阶。","end_state":"信已入盒，盒盖关闭，右手离开盖面。","video_prompt_zh":"@图片1 参考青年造型、盒子结构与桌面布局。保持手绘赛璐璐色阶和绘画背景。0–4秒：固定斜上中景，青年右手把一封信放入木盒。4–8秒：右手扶盒盖沿铰链落下，盖闭合后手离开。背景与灯不变，纸声、木盖轻响，无对白、无配乐，不新增第二封信。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作盒子开启状态关键帧"}],"status":"planned","media_tested":false,"checks":["信只一封","信确实入盒","盖沿铰链转","手最后离开","背景不闪烁"],"fallback":"盒盖结构失败时增加盒子开合参考图，不用转场掩盖闭合。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.graphic-comic","family":"animation-2d","name":"图形漫画","aliases":[],"description":"以黑色块、剪影和构图切换组织冲击。",
+    "components":{"media":"media.cel-2d","look":"look.monochrome","direction":"direction.graphic","purpose":"purpose.drama"},
+    "suitable_for":["短段揭示","高对比轮廓"],"avoid_when":["原文颜色是谜底，需改为保色方案"],
+    "character_design":"发型与衣服黑白分区可辨。","environment_design":"用少量黑白块建立前后位置。",
+    "visual_rules":"线条与网点受控，画面不是随机多宫格。","motion_rules":"动作接点切换构图，速度强调必须跟随对象。","sound_rules":"动作短声，不把拟声字当必要图像文字。","performance_rules":"清楚姿态先于极端表情。",
+    "continuity_anchors":["白袖口","门在画右","钥匙孔位置"],"failure_modes":["自动漫画分格：明确单幅连续画面，切镜用文字交代。"],
+    "example":{"source":"她把钥匙插入门锁，转动后推开门。","invariants":["插钥匙","转锁","推门"],"director_intent":"把开门过程组织为两个清楚信息点。","shot_reason":"先近景读锁，再中景看门真的打开。","references":["待制作白袖口女子与门锁设定","待制作钥匙靠近锁孔关键帧"],"image_prompt_en":"Single-panel black-and-white comic illustration, close view of a white-cuffed right hand holding one key just before a door lock at frame right. Strong black door plane, clean white hand silhouette, sparse halftone on the wall, lock opening fully visible. No lettering or additional panels. Aspect ratio 16:9.","image_prompt_zh":"单幅黑白漫画近景，白袖口右手拿钥匙贴近锁孔，门在画右，无文字分格。","end_state":"门向内打开，女子仍在门外，手不穿过门。","video_prompt_zh":"@图片1 参考手、钥匙和门锁位置；@图片2 仅参考女子全身造型，不复制背景。黑白图形漫画。0–4秒：近景，右手插钥匙并转动一次。4–8秒：镜头切至门外侧中景，她右手推门向内打开。保持门与锁的方向，锁响后才有门轴声，无配乐、无拟声字，不生成漫画分格。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作锁孔起始帧"},{"token":"@图片2","role":"待制作白袖口女子定妆，仅身份"}],"status":"planned","media_tested":false,"checks":["钥匙先插再转","一次转动","切镜后门方向相同","无额外分格","门真实打开"],"fallback":"开锁接触失败时缩短展示幅度但保留插入动作，不能直接删到开门结果。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.storybook-fantasy","family":"animation-2d","name":"绘本幻想","aliases":[],"description":"通过绘画层次和地标，让温和幻想可定位。",
+    "components":{"media":"media.painted-2d","look":"look.painterly","direction":"direction.classical","purpose":"purpose.scifi-fantasy"},
+    "suitable_for":["空间旅程","温和幻想"],"avoid_when":["需要机械结构精确演示"],
+    "character_design":"简化人物轮廓，固定衣服主色与随身物。","environment_design":"幻想植物也需固定路径和地标。",
+    "visual_rules":"柔和绘画背景与清晰主体分离。","motion_rules":"多层背景移动表达路程，角色不能滑行替代走路。","sound_rules":"脚步与环境声提示材质，音乐克制。","performance_rules":"观察与指向有对象。",
+    "continuity_anchors":["橙色围巾","桥下水流方向","灯笼数量"],"failure_modes":["背景吞没脚步：保留较硬的地面接触轮廓。"],
+    "example":{"source":"女孩走过小桥，在桥尾举起一盏灯笼。","invariants":["走过桥","桥尾举灯","只有一灯"],"director_intent":"让通过空间与灯光升起形成段落终点。","shot_reason":"侧面全景保留桥头桥尾，明确走了多远。","references":["待制作橙围巾女孩","待制作小桥与灯笼起始帧"],"image_prompt_en":"Painted storybook illustration, wide side layout of an original girl with an orange scarf at the left end of a small curved bridge. One lantern hangs from her right hand. Layered blue-green foliage, warm lantern glow, softly painted stream below, clear bridge surface and unobstructed right landing. Aspect ratio 16:9.","image_prompt_zh":"女孩在桥左端，橙围巾、右手一盏灯，桥右端留空，冷背景与暖灯分层。","end_state":"女孩在右桥尾停住，右手灯笼举到肩高。","video_prompt_zh":"@图片1 参考女孩、灯笼和桥的地理。保持绘本笔触。0–6秒：固定侧面全景，她从左向右走过小桥，右手提灯。6–10秒：到右桥尾停下，把灯举到肩高；桥下水流持续向画右。保留木桥脚步和流水声，无对白、无配乐，灯笼不增加，人物不悬浮。","duration_seconds":10,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作桥头单幅起始帧"}],"status":"planned","media_tested":false,"checks":["完整过桥","灯在右手","桥尾才举灯","水向不变","脚接触桥面"],"fallback":"桥太长导致跳步时缩短桥面设计，先确认新地理再生成关键帧。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.elastic-comedy","family":"animation-2d","name":"弹性卡通喜剧","aliases":[],"description":"让预期、回弹和停顿成为可读笑点。",
+    "components":{"media":"media.cel-2d","look":"look.pastel-geometric","direction":"direction.expressive","purpose":"purpose.comedy"},
+    "suitable_for":["形体笑点","轻动作喜剧"],"avoid_when":["必须真实还原人体或产品材料性质"],
+    "character_design":"设定头身比例与形变限度，动作后回到原造型。","environment_design":"障碍与道具间距支持笑点。",
+    "visual_rules":"轮廓干净、背景简洁、动作对象足够大。","motion_rules":"预备后才释放形变，落点留时间，不无限弹跳。","sound_rules":"弹性短音与停顿配合，不加无关笑声。","performance_rules":"先理解目标再受阻，反应由事件触发。",
+    "continuity_anchors":["红帽子","架子位置","盒子未打开"],"failure_modes":["人物变成液体：限制形变幅度，随后回原比例。"],
+    "example":{"source":"红帽小人踮脚够架上的盒子，够不到，放下脚跟看着盒子。","invariants":["踮脚够盒","没有够到","回落看盒"],"director_intent":"笑点在努力与距离，不新增摔倒或成功。","shot_reason":"侧面全身让手与盒之间差距始终可见。","references":["待制作红帽原创小人","待制作高架与盒子侧面起始帧"],"image_prompt_en":"Clean 2D cartoon full-body side view of an original small character with a red cap, feet flat on the floor below a high shelf. One closed blue box sits beyond reach. Simple cream background, rounded shapes, two-tone shadows, visible gap between the lowered hand and the shelf. Aspect ratio 16:9.","image_prompt_zh":"红帽小人脚掌平放，侧面全身，高架上一只闭合蓝盒，距离明确。","end_state":"脚跟回地，双手放低，小人仰看未移动的盒子。","video_prompt_zh":"@图片1 参考红帽小人的比例、架子和蓝盒位置。0–3秒：小人踮脚伸右手够盒，身体轻微拉长，盒子不动。3–5秒：指尖仍差一点，保持一小段停顿。5–8秒：脚跟回地，身体恢复原比例，手放低，抬头看盒。固定侧面全身，只有踮脚摩擦与短促弹性音，无对白、无配乐、无笑声。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作侧面全身起始帧"}],"status":"planned","media_tested":false,"checks":["盒子未移动","确实够不到","红帽不变形脱落","回原比例","没有新增跌倒"],"fallback":"形变失控时删形变保留踮脚和停顿，仍能保住笑点事实。"}
+  }
+]

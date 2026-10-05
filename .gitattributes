@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+*.jpg binary linguist-generated
+*.jpeg binary linguist-generated
+*.png binary linguist-generated
+*.webp binary linguist-generated
+*.gif binary linguist-generated

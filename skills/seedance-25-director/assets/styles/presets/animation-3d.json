@@ -1,0 +1,38 @@
+[
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.cg-cinematic","family":"animation-3d","name":"写实三维电影","aliases":[],"description":"把空间结构、材料与运动重量统一起来。",
+    "components":{"media":"media.cg-realistic","look":"look.industrial-future","direction":"direction.classical","purpose":"purpose.drama"},
+    "suitable_for":["结构清楚的空间动作","可预演镜头"],"avoid_when":["没有机械依据却要求真实拆装内部"],
+    "character_design":"比例、工作服接缝与手套结构固定。","environment_design":"明确台面、滑轨与设备尺度。",
+    "visual_rules":"材料反射随几何变化，景深不掩盖接触面。","motion_rules":"先接触再移动，重量由速度与停下过程体现。","sound_rules":"材质声有对象与时间。","performance_rules":"动作力来自身体支点，不让物件无因飞起。",
+    "continuity_anchors":["灰手套","托盘轨道","设备外形"],"failure_modes":["托盘穿轨：用白模限制轨迹，先少量位移。"],
+    "example":{"source":"操作员把金属托盘沿台面推到挡块前停下。","invariants":["沿台面推","挡块前停","不抬起托盘"],"director_intent":"让材质与重量通过可见接触表达。","shot_reason":"低角度中近景看清底面与挡块。","references":["待制作灰手套操作员","待制作台面轨道和托盘起始帧"],"image_prompt_en":"Realistic 3D rendered medium-close view across a workbench. An operator's grey-gloved right hand rests against the left edge of a steel tray, with a fixed stop block at frame right. The tray sits flush on the bench. A long overhead soft panel forms controlled metal reflections, contact edges sharp and readable. Aspect ratio 16:9.","image_prompt_zh":"灰手套右手在托盘左边，右侧固定挡块，台面接触清楚，长柔光反射。","end_state":"托盘在挡块前停下，手仍触边，不穿透挡块。","video_prompt_zh":"@图片1 参考灰手套、托盘与挡块几何。写实三维。0–5秒：固定中近景，右手将托盘沿台面从左推向右。5–8秒：托盘在挡块前减速停下，手保持接触。托盘不抬起、不变形，长条反射随位置改变，只有金属擦台声，无对白、无配乐。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作结构清楚的起始关键帧"}],"status":"planned","media_tested":false,"checks":["先接触后移动","托盘不悬空","挡块固定","停下不穿透","反射与移动相关"],"fallback":"接触不稳时缩短移动距离或提供同轨迹白模，不能声称结构已验证。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.cg-character","family":"animation-3d","name":"风格化角色三维","aliases":[],"description":"通过简化造型与可读姿态呈现角色行动。",
+    "components":{"media":"media.cg-stylized","look":"look.pastel-geometric","direction":"direction.intimate","purpose":"purpose.drama"},
+    "suitable_for":["角色表演","轻剧情"],"avoid_when":["必须还原真实人物外貌的授权项目需另定规则"],
+    "character_design":"统一头身比例、发束、衣服色块，不一律巨大眼睛。","environment_design":"减少小物件，让手与目标关系清楚。",
+    "visual_rules":"柔和体积与接触影并存，眼与手同框。","motion_rules":"重心随伸手变化，放物后有手部跟随。","sound_rules":"物件轻声服务表演。","performance_rules":"身体朝向和视线有目标。",
+    "continuity_anchors":["绿围裙","杯子把手","桌面位置"],"failure_modes":["杯把变形：降低握持复杂度，手拿杯身下部。"],
+    "example":{"source":"店员把空杯移到桌子另一侧，为客人腾出位置。","invariants":["空杯","移到另一侧","腾出原位置"],"director_intent":"用让出空间表现服务动作，不编造关系冲突。","shot_reason":"中景保留移前与移后两个位置。","references":["待制作绿围裙店员","待制作桌面单杯起始帧"],"image_prompt_en":"Stylized 3D character scene, medium view of an original short-haired clerk in a green apron behind a small table. One empty cream cup stands on the table's left side; the right side is clear. The clerk's right hand is near the cup base. Soft window light from frame left, rounded but stable forms, visible contact shadows. Aspect ratio 16:9.","image_prompt_zh":"绿围裙店员在桌后，空杯在桌左，右侧空出，右手靠杯底，左窗柔光。","end_state":"空杯在桌右，原左侧空出，店员右手离杯。","video_prompt_zh":"@图片1 参考店员比例、围裙、杯子和桌面。保持风格化三维。0–5秒：固定中景，店员右手握杯身下部，提起一点并放到桌右侧。5–8秒：右手离杯，原左侧保持空出，店员目光落在腾出的地方。窗光稳定，只有杯底轻触桌面声，无对白、无配乐。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作桌面起始帧"}],"status":"planned","media_tested":false,"checks":["杯始终空","移到右侧","左侧腾空","手最后离杯","比例和窗光稳定"],"fallback":"提放变形时改为沿桌面平移，须说明动作实现调整且保留腾位目的。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.low-poly","family":"animation-3d","name":"低多边形设计","aliases":[],"description":"把几何块面作为有意的视觉规则。",
+    "components":{"media":"media.cg-stylized","look":"look.pastel-geometric","direction":"direction.graphic","purpose":"purpose.drama"},
+    "suitable_for":["简化空间叙事","限定色设计"],"avoid_when":["需要细致织物或精密零件表现"],
+    "character_design":"块面轮廓、衣服主色、关节位置固定。","environment_design":"地面与障碍用简洁几何体，不随机细分。",
+    "visual_rules":"块面法线和阴影稳定，限制色板。","motion_rules":"动作路径简单清楚，块面不随时间增减。","sound_rules":"轻而明确的脚步和物件声。","performance_rules":"靠姿态与朝向，不依赖细小表情。",
+    "continuity_anchors":["蓝外套","三块台阶","终点平台"],"failure_modes":["几何密度变化：固定面片观感，减少转体。"],
+    "example":{"source":"蓝衣旅人走上三层台阶，在平台停下。","invariants":["三层台阶","向上走","平台停下"],"director_intent":"用清楚几何节奏表达到达。","shot_reason":"侧面全景能数清台阶与每次升高。","references":["待制作蓝衣低多边形旅人","待制作三阶平台起始帧"],"image_prompt_en":"Low-poly 3D wide side view. An original traveler in a blue coat stands at the left of exactly three broad coral steps leading to a cream platform on the right. Angular faces remain visible on the coat and ground, limited blue-coral-cream palette, one soft light from upper left. Both feet and all steps are readable. Aspect ratio 16:9.","image_prompt_zh":"低多边形侧面全景，蓝衣旅人在左，右侧恰好三阶珊瑚色台阶接奶油色平台。","end_state":"旅人双脚站在最高平台，台阶仍为三层。","video_prompt_zh":"@图片1 参考旅人块面、三层台阶与配色。0–6秒：固定侧面全景，旅人从左向右逐层走上三阶，脚落在每阶表面。6–9秒：到平台停住。几何面片观感、左上光源保持，不平滑成写实皮肤。脚步随落脚出现，无对白、无配乐。","duration_seconds":9,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作三阶起始帧"}],"status":"planned","media_tested":false,"checks":["始终三阶","不跳过台阶","脚接触表面","终点在平台","面片观感稳定"],"fallback":"踩阶不稳时分成逐阶短镜头，仍展示三次升高而非瞬移。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.miniature-toy","family":"animation-3d","name":"微缩玩具世界","aliases":[],"description":"通过台景尺度、材料和比例线索建立微缩观感。",
+    "components":{"media":"media.cg-stylized","look":"look.natural","direction":"direction.observational","purpose":"purpose.drama"},
+    "suitable_for":["微缩故事","物件尺度体验"],"avoid_when":["要让观众误以为真实纪录素材"],
+    "character_design":"玩偶关节与涂装稳定。","environment_design":"陈设相对玩偶的比例明确，不能每镜重缩放。",
+    "visual_rules":"木、漆与布有微缩尺度，不滥用倾斜虚化。","motion_rules":"动作幅度与短肢体相称，物件不无重力滑动。","sound_rules":"小物件轻响，避免无理由巨大撞击。","performance_rules":"通过身体倾斜和手的目标表达行动。",
+    "continuity_anchors":["黄漆外套","木箱比例","小车方向"],"failure_modes":["比例漂移：保留同框尺寸锚点，减少大幅机位变化。"],
+    "example":{"source":"玩偶把木箱放上小车，松手看着它。","invariants":["木箱放车上","松手","箱不滑走"],"director_intent":"用放下后的稳定接触表达完成。","shot_reason":"斜侧中景能同时比较玩偶、箱子和车的尺寸。","references":["待制作黄外套玩偶","待制作木箱和小车起始帧"],"image_prompt_en":"Miniature toy-world 3D medium view at tabletop height. A painted wooden figure in a yellow coat holds one small wooden crate with both hands just above a red cart. The cart is half the figure's height, all four wheels rest on a matte tabletop. Soft side window light, visible paint and wood texture, readable crate-to-cart gap. Aspect ratio 16:9.","image_prompt_zh":"黄外套木玩偶双手托箱，箱在红车上方，小车约玩偶半高，侧窗光。","end_state":"箱子稳放车上，双手离开，玩偶仍朝向箱子。","video_prompt_zh":"@图片1 参考玩偶涂装、木箱与红车尺寸。0–4秒：固定斜侧中景，玩偶双手将木箱下放到车面。4–8秒：确认接触后双手松开退回身旁，目光朝箱子，车不移动。保持微缩木质观感和侧窗光，只有木箱落车轻响，无对白、无配乐。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作箱在车上方的起始帧"}],"status":"planned","media_tested":false,"checks":["放下后才松手","箱不悬浮","车不滑走","比例不变","木漆材质稳定"],"fallback":"双手接触失败时降低箱子悬空距离，保留放下和松手两个阶段。"}
+  }
+]

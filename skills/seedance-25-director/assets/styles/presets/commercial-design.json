@@ -1,0 +1,56 @@
+[
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.material-luxury","family":"commercial-design","name":"材质精工广告","aliases":[],"description":"让受控光线证明产品外形和材料。",
+    "components":{"media":"media.cg-realistic","look":"look.clean-commercial","direction":"direction.classical","purpose":"purpose.product"},
+    "suitable_for":["金属与玻璃","材质记忆"],"avoid_when":["没有参考却要求复现真实产品部件"],
+    "character_design":"无人时明确不适用；出现手则另设手部与授权。","environment_design":"反射环境可控，背景不抢轮廓。",
+    "visual_rules":"拉丝金属用条形反射，玻璃保轮廓，不能所有材料同一塑料高光。","motion_rules":"分别决定灯、产品与摄影机的运动，只让必要对象动。","sound_rules":"材料声若无动作来源则不用。","performance_rules":"物件展示不拟人化。",
+    "continuity_anchors":["瓶盖比例","瓶身轮廓","无新增标识"],"failure_modes":["扫光重设计瓶身：固定产品，仅改变反射光带。"],
+    "example":{"source":"展示一只无标识拉丝金属水瓶，让光带经过瓶身，最后完整呈现。","invariants":["无标识","拉丝金属","完整水瓶"],"director_intent":"让观众读出材料与轮廓，不发明保温功效。","shot_reason":"三分之四中近景兼顾瓶盖和瓶身。","references":["待制作原创金属水瓶身份图","待制作瓶身起始关键帧"],"image_prompt_en":"Realistic 3D product still of one unbranded brushed-steel water bottle, three-quarter view, entire cap and base visible on a charcoal plinth. A narrow softbox reflection sits along the left edge, with black flags controlling the opposite side. Fine horizontal brushing, stable cylindrical proportions, dark uncluttered background. Aspect ratio 16:9.","image_prompt_zh":"无标识拉丝钢水瓶三分之四全貌，深灰台座，左边窄柔光反射，瓶盖底部可见。","end_state":"光带停在瓶身右侧，全瓶完整、静止、可读。","video_prompt_zh":"@图片1 参考水瓶外形、瓶盖比例、材质与构图，不新增标识。写实三维产品画面。0–5秒：瓶与摄影机固定，一道长条柔光反射缓慢从瓶身左侧经过到右侧。5–8秒：光带停住，全瓶保持清楚。背景与台座不变，无对白、无配乐、无无来源机械音。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作产品起始帧，外形与材质参考"}],"status":"planned","media_tested":false,"checks":["全瓶可见","瓶不旋转","比例未变","只有反射移动","无新增字样"],"fallback":"扫光漂移时改为固定光与短慢推，先确认取景改变，仍保留材质展示目的。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.clean-product","family":"commercial-design","name":"明净电商演示","aliases":[],"description":"让真实操作和结果清楚，不以美化取代功能证据。",
+    "components":{"media":"media.photographic","look":"look.clean-commercial","direction":"direction.classical","purpose":"purpose.product"},
+    "suitable_for":["开合与按钮演示","清晰全貌"],"avoid_when":["产品功能与结构未提供依据"],
+    "character_design":"如只需手部就不强加人物故事。","environment_design":"背景简洁，保留操作空间与接触影。",
+    "visual_rules":"颜色准确、全貌完整、关键部件不反光过曝。","motion_rules":"先动作后结果，必要时固定机位。","sound_rules":"功能产生的声音，不能伪造性能数据。","performance_rules":"手的位置不遮住操作证明。",
+    "continuity_anchors":["铰链方向","盖与底一体","盒内为空"],"failure_modes":["开盖断裂：提供结构参考，降低开合角。"],
+    "example":{"source":"打开原创收纳盒的上盖，展示空的内部空间。","invariants":["上盖打开","内部为空","原盒结构"],"director_intent":"看懂开合与容量空间，不宣称防水或耐摔。","shot_reason":"斜上全貌展示盖与内壁。","references":["待准备真实获授权或原创收纳盒结构图","待制作盒盖闭合起始帧"],"image_prompt_en":"Photographic product still, three-quarter elevated view of an original unbranded cream storage box on a pale grey table. The lid is closed, hinge along the far edge. An adult right hand rests at the front lip without obscuring it. Large soft side light, accurate neutral color, complete box and contact shadow visible. Aspect ratio 16:9.","image_prompt_zh":"奶油色收纳盒闭盖，铰链在远侧，成年右手在前唇，斜上全貌与柔侧光。","end_state":"盖沿远侧铰链打开，空内腔可见，盒底仍在桌面。","video_prompt_zh":"@图片1 参考盒子比例、铰链与起始构图；@图片2 仅参考盒内结构，不复制其背景。0–5秒：固定斜上全貌，右手抬前唇，盖沿远侧铰链打开。5–8秒：保持开启，露出空内腔，盒底不动。柔侧光稳定，保留真实开盖轻响，无对白、无配乐、无功能字幕。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作闭盒起始帧"},{"token":"@图片2","role":"待准备开盒内部结构图"}],"status":"planned","media_tested":false,"checks":["铰链不换边","内部确为空","盒底不离桌","手不遮内腔","没有虚构功能"],"fallback":"开合不稳时改为闭盒与开盒两个明确状态镜头，说明未连续证明机械过程。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.sensory-food","family":"commercial-design","name":"感官食品广告","aliases":[],"description":"通过可信的切面、温度线索与材料动作表现食物。",
+    "components":{"media":"media.photographic","look":"look.natural","direction":"direction.intimate","purpose":"purpose.product"},
+    "suitable_for":["食物质地","切开或倒出"],"avoid_when":["没有事实支持却要表现健康功效"],
+    "character_design":"必要手部保持数量与持物一致。","environment_design":"台面、餐具和食物比例真实。",
+    "visual_rules":"侧逆光展示结构，蒸汽只用于确实热的食物。","motion_rules":"动作正常速度优先，慢动作有明确观察对象。","sound_rules":"切开、脆裂、流动声来自画面。","performance_rules":"不在同一镜头同时切、拿、吃多事件。",
+    "continuity_anchors":["面包数量","刀的方向","切面位置"],"failure_modes":["食物自行融化：去掉泛化流动词，明确要看的断面。"],
+    "example":{"source":"用刀切开一个小面包，露出内部孔隙。","invariants":["一个面包","刀切开","露出孔隙"],"director_intent":"用真实切面证明纹理，不夸大口感功效。","shot_reason":"斜侧近景保留刀与面包的接触。","references":["待准备原创面包外观与断面参考","待制作刀在面包上方起始帧"],"image_prompt_en":"Photographic food close-up of one small crusty bread roll on a wooden board. A right hand holds a bread knife just above its center while the left hand rests safely on the far side. Soft side-back window light from frame left reveals crust texture, clear board contact, neutral kitchen background, no artificial steam. Aspect ratio 16:9.","image_prompt_zh":"一只面包在木板上，右手刀在中央上方，左手在远侧扶稳，画左侧逆光，无蒸汽。","end_state":"面包分成两半，切面孔隙可见，刀已离开切口。","video_prompt_zh":"@图片1 参考面包、手和木板起点；@图片2 仅参考面包内部孔隙，不改变外形。0–5秒：固定斜侧近景，右手用刀切开面包，左手在远侧扶稳。5–9秒：刀退出，左手把一半轻移开，露出真实孔隙。保持正常速度、侧逆光和木板接触，切壳与刀触板轻响，无对白、无配乐，不增加蒸汽。","duration_seconds":9,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作切前关键帧"},{"token":"@图片2","role":"待准备断面参考，仅内部结构"}],"status":"planned","media_tested":false,"checks":["一个变两半","刀先切后退出","手部无穿插","孔隙而非流心","无虚构蒸汽"],"fallback":"切割接触失败时拆为切入近景与切面静态镜头，注明剪辑表达而非连续演示。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.fashion-editorial","family":"commercial-design","name":"时装编辑影像","aliases":[],"description":"让身体动作展示剪裁和织物，而不是空泛摆姿势。",
+    "components":{"media":"media.photographic","look":"look.classic-low-key","direction":"direction.expressive","purpose":"purpose.music-fashion"},
+    "suitable_for":["服装结构","织物随动"],"avoid_when":["需要精确色卡而所选彩光会改变本色"],
+    "character_design":"原创成年模特，固定服装剪裁与纽扣数量。","environment_design":"布景少而有方向，衣摆活动范围够。",
+    "visual_rules":"用侧光读褶皱，完整轮廓不被裁断。","motion_rules":"转体、衣料随动与镜头运动分开，不同时多轴旋转。","sound_rules":"脚步与织物声，可另配已授权音乐。","performance_rules":"姿态目的是展示某处剪裁。",
+    "continuity_anchors":["米色长外套","腰带结","纽扣位置"],"failure_modes":["转身换衣：减少转幅并补背面参考。"],
+    "example":{"source":"模特转成侧身，抬起右臂展示外套袖型，再放下。","invariants":["侧身","右臂抬起","放下"],"director_intent":"让观众看到袖型随姿态的变化。","shot_reason":"全身保持轮廓，机位不绕转抢走衣服运动。","references":["待准备原创成年模特定妆与外套结构","待制作正面全身起始帧"],"image_prompt_en":"Photographic full-length editorial portrait of an original adult model in a beige belted coat, standing frontally with arms lowered against a dark taupe studio wall. Belt knot and button positions clear, soft raking light from frame left describing sleeve folds, both shoes visible, empty space at frame right for the arm. Aspect ratio 9:16.","image_prompt_zh":"米色腰带外套成年模特正面全身，双臂下垂，左侧掠射柔光，右侧留抬臂空间。","end_state":"模特保持侧身，右臂已放下，外套恢复垂落。","video_prompt_zh":"@图片1 参考成年模特身份、外套剪裁和腰带结。0–3秒：固定全身竖构图，模特转成右侧身。3–6秒：右臂抬到肩高，袖型清楚。6–9秒：右臂放下，衣料跟随落定。左侧柔光保持，不改纽扣与衣长；脚步和织物声，无对白、无配乐，不切镜。","duration_seconds":9,"aspect_ratio":"9:16","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作模特正面全身起始帧"}],"status":"planned","media_tested":false,"checks":["成年角色身份固定","右臂动作","袖型未改","全身不裁脚","衣料在放臂后落定"],"fallback":"侧身结构不明时增加服装侧面参考，不能让模型自由重设计。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.graphic-brand","family":"commercial-design","name":"图形品牌短片","aliases":[],"description":"通过形状、配色和运动规则建立记忆。",
+    "components":{"media":"media.motion-graphics","look":"look.pastel-geometric","direction":"direction.graphic","purpose":"purpose.product"},
+    "suitable_for":["抽象品牌视觉","图形记忆"],"avoid_when":["必须完整展示产品功能的说明"],
+    "character_design":"无人物则不适用，使用原创图形。","environment_design":"平面布局与留白比例固定。",
+    "visual_rules":"主色、辅色和边距有层级。","motion_rules":"每个形状有独立轨迹和终点，不无序漂移。","sound_rules":"简洁节奏音与到位动作对应。","performance_rules":"不把图形编成人物心理。",
+    "continuity_anchors":["圆方数量","限定色板","落版留白"],"failure_modes":["几何数量增加：逐对象写路径，减少同时变化。"],
+    "example":{"source":"一个蓝圆和一个红方从两侧靠近，在中央并排停下，右侧留白。","invariants":["一圆一方","靠近后并排","右侧留白"],"director_intent":"用两种形状的关系形成可记住的落版。","shot_reason":"正面平面构图能精确读位置与数量。","references":["待制作蓝圆红方起始布局图"],"image_prompt_en":"Flat graphic design on a warm cream background. One solid blue circle sits near the left edge and one solid red square sits right of center, both on the same horizontal baseline. Clean vector-like edges, equal visual weight, generous margins, no lettering, no shadows, no extra shapes. Aspect ratio 16:9.","image_prompt_zh":"奶油底、左蓝圆、偏右红方，同基线，平面无阴影文字。","end_state":"蓝圆与红方在中部偏左并排停住，右侧留白。","video_prompt_zh":"@图片1 参考形状、数量与限定配色。0–4秒：固定平面视图，蓝圆向右、红方向左移动，到中部偏左并排，互不重叠。4–7秒：两形停住，右侧保持空白。边缘清楚，不变形、不加形状，停下时一声轻节拍，无对白、无音乐、无文字。","duration_seconds":7,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作平面初始布局图"}],"status":"planned","media_tested":false,"checks":["一圆一方","互不重叠","终点并排","右侧留白","停下后不漂移"],"fallback":"几何精度不足时将该段交给后期图形动画，不宣称生成能够像素对齐。"}
+  },
+  {
+    "kind":"preset","origin":"技能原创设计，未生成实测","id":"preset.explanatory-motion","family":"commercial-design","name":"信息动态图解","aliases":[],"description":"先决定信息层级，再用时序展示关系。",
+    "components":{"media":"media.motion-graphics","look":"look.clean-commercial","direction":"direction.graphic","purpose":"purpose.documentary-education"},
+    "suitable_for":["步骤关系","分类与对比"],"avoid_when":["无依据的数据或机制需要先核实"],
+    "character_design":"无人，符号含义需在文案中明确。","environment_design":"不设真实空间，布局对应信息关系。",
+    "visual_rules":"图形可辨、字号与数字精度交给后期。","motion_rules":"一次出现一个关系，不同时飞入全部信息。","sound_rules":"解说与画面同序；没有解说文本则不编造。","performance_rules":"用图形行为说明关系，不赋予道德含义。",
+    "continuity_anchors":["三块数量","先后顺序","外框与方块间距"],"failure_modes":["点亮次序出错：按阶段呈现，必要时后期制作。"],
+    "example":{"source":"用三个无字方块依次表示准备、执行、检查，按从左到右的顺序点亮。","invariants":["三个方块","左到右点亮","无字"],"director_intent":"表达顺序，不虚构比例或效果数据。","shot_reason":"固定平面构图让变化只来自状态。","references":["待制作三个灰方块初始布局"],"image_prompt_en":"Minimal flat infographic on white. Exactly three equal grey squares form one horizontal row with equal spacing, centered in the frame. No text, numbers, arrows or shadows. A thin blue outline surrounds the row without touching the squares. Crisp edges, ample white margins. Aspect ratio 16:9.","image_prompt_zh":"白底三等大灰方块等距排一行，细蓝外框不接触方块，无字无箭头。","end_state":"三个方块都变蓝，数量、间距和外框保持。","video_prompt_zh":"@图片1 参考三方块数量、间距与外框。固定平面视图。0–2秒：左方块由灰变蓝。2–4秒：中方块变蓝，左块保持。4–6秒：右块变蓝。6–8秒：三块保持蓝色。每次点亮一声轻音，无对白、无配乐，不添加文字、箭头或数据。","duration_seconds":8,"aspect_ratio":"16:9","task":"reference_to_video","bindings":[{"token":"@图片1","role":"待制作三灰方块布局图"}],"status":"planned","media_tested":false,"checks":["恰好三块","严格左中右","已亮不熄灭","外框不变","无虚构文字数据"],"fallback":"次序或几何不稳定时改用后期矢量动画，保留说明内容不变。"}
+  }
+]

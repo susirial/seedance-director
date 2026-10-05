@@ -1,0 +1,8 @@
+[
+  {"kind":"component","id":"direction.observational","axis":"direction","name":"观察自然主义","aliases":[],"description":"让行动在空间中完整发生。","rules":["固定或跟随必须有观察理由。","保留行动所需时间与现场声。"],"compatibility_notes":"不把观察等同于一律无剪辑。"},
+  {"kind":"component","id":"direction.classical","axis":"direction","name":"古典构图","aliases":[],"description":"用平衡与清楚的镜头关系组织故事。","rules":["视线、动作、屏幕方向可对接。","在信息变化时切换景别。"],"compatibility_notes":"平衡构图不等于强制中心对称。"},
+  {"kind":"component","id":"direction.kinetic","axis":"direction","name":"动感本能","aliases":[],"description":"观众贴近动作的力与节奏。","rules":["运动前给方向或重心线索。","接触时保留可见证据，不能全靠摇晃掩盖。"],"compatibility_notes":"强运动与微小产品字样同时可读通常需拆镜。"},
+  {"kind":"component","id":"direction.expressive","axis":"direction","name":"表现主义","aliases":[],"description":"放大构图、色彩或节奏来外化主题。","rules":["每次形式变化对应具体内容。","确定一项主导，不把全部维度都推到极端。"],"compatibility_notes":"夸张不能静默改变原文事实。"},
+  {"kind":"component","id":"direction.intimate","axis":"direction","name":"亲密极简","aliases":[],"description":"集中观察人和道具之间的微小关系。","rules":["近景仍须看得到关键动作对象。","用停顿、呼吸或未完成动作组织注意力。"],"compatibility_notes":"不是给所有角色编造压抑与悲伤。"},
+  {"kind":"component","id":"direction.graphic","axis":"direction","name":"图形形式主义","aliases":[],"description":"用位置、形状、间距和精确时序建立秩序。","rules":["把画面中轴与间距写具体。","变形或打破对称需有触发。"],"compatibility_notes":"画面整齐不能牺牲信息优先级。"}
+]

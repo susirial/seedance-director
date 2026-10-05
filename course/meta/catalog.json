@@ -1,0 +1,253 @@
+{
+  "pathBase": "course",
+  "note": "模块目录、封面、资源、对照组和景别图的路径都相对 course/。",
+  "stages": [
+    "入门",
+    "基础",
+    "进阶",
+    "高级",
+    "大师"
+  ],
+  "modules": [
+    {
+      "id": "00",
+      "directory": "00-导论与工作流",
+      "title": "导论与工作流",
+      "english": "Think Like a Director",
+      "stage": 0,
+      "description": "先决定为什么拍，再决定怎么拍。建立从想法到影像的完整工作流。",
+      "cover": "01-景别/教学/图/L01-01-远景.jpg",
+      "borrowed": "L01-01 景别"
+    },
+    {
+      "id": "01",
+      "directory": "01-景别",
+      "title": "景别",
+      "english": "The Distance of Emotion",
+      "stage": 0,
+      "description": "从大远景到微距，用距离决定观众与人物的关系。",
+      "cover": "01-景别/教学/图/L01-01-景别阶梯总览.jpg"
+    },
+    {
+      "id": "02",
+      "directory": "02-景深与焦段",
+      "title": "景深与焦段",
+      "english": "Guide the Eye",
+      "stage": 1,
+      "description": "让清晰与模糊各司其职，控制空间，也控制注意力。",
+      "cover": "02-景深与焦段/教学/图/L02-01-浅景深.jpg"
+    },
+    {
+      "id": "03",
+      "directory": "03-构图",
+      "title": "构图",
+      "english": "Give Space a Meaning",
+      "stage": 1,
+      "description": "线条、留白、对称与轴线，让画面里的每个位置都有意义。",
+      "cover": "03-构图/教学/图/L03-03-一点透视空镜.jpg"
+    },
+    {
+      "id": "04",
+      "directory": "04-光影与色彩",
+      "title": "光影与色彩",
+      "english": "Paint with Light",
+      "stage": 2,
+      "description": "从一束有来源的光开始，塑造质感、情绪和故事的转折。",
+      "cover": "04-光影与色彩/教学/图/L04-04-黄金时刻.jpg"
+    },
+    {
+      "id": "05",
+      "directory": "05-运镜",
+      "title": "运镜",
+      "english": "Move with Intention",
+      "stage": 2,
+      "description": "固定、推拉、跟随与长镜头。每一次移动，都为叙事服务。",
+      "cover": "05-运镜/教学/图/L05-05-俯拍.jpg"
+    },
+    {
+      "id": "06",
+      "directory": "06-镜头语言综合与分镜",
+      "title": "镜头语言与分镜",
+      "english": "Build a Scene",
+      "stage": 3,
+      "description": "从一个好镜头，到一场完整的戏：覆盖、剪辑、调度与连续性。",
+      "cover": "03-构图/教学/图/L03-06-双人建立.jpg",
+      "borrowed": "L03-06 动态构图与轴线"
+    },
+    {
+      "id": "07",
+      "directory": "07-世界导演风格",
+      "title": "世界导演风格",
+      "english": "Find Your Visual Voice",
+      "stage": 3,
+      "description": "拆解大师的方法，而非复制表面。逐渐形成自己的视觉判断。",
+      "cover": "07-世界导演风格/教学/图/L07-15-霓虹雨夜.jpg"
+    },
+    {
+      "id": "08",
+      "directory": "08-类型片实战",
+      "title": "类型片实战",
+      "english": "Make the Audience Feel",
+      "stage": 4,
+      "description": "悬疑、动作、爱情与科幻，把镜头语言变成明确的观众体验。",
+      "cover": "08-类型片实战/教学/图/L08-02-动作低角.jpg"
+    },
+    {
+      "id": "09",
+      "directory": "09-毕业项目",
+      "title": "毕业项目",
+      "english": "From Script to Screen",
+      "stage": 4,
+      "description": "整合剧本、分镜和生成工作流，通过重拍判断完成导演复盘。",
+      "cover": "07-世界导演风格/教学/图/L07-16-大色块.jpg",
+      "borrowed": "L07-16 张艺谋"
+    }
+  ],
+  "resources": [
+    {
+      "id": "glossary",
+      "sourcePath": "附录/A-01-术语中英对照表.md",
+      "label": "术语中英对照",
+      "description": "镜头语言的随手词典。"
+    },
+    {
+      "id": "quick-reference",
+      "sourcePath": "附录/A-02-一页速查卡.md",
+      "label": "一页速查卡",
+      "description": "开拍之前，快速检查关键选择。"
+    },
+    {
+      "id": "troubleshooting",
+      "sourcePath": "附录/A-03-常见失败与修复.md",
+      "label": "常见失败与修复",
+      "description": "从错误现象找到下一次调整。"
+    },
+    {
+      "id": "official-cases",
+      "sourcePath": "附录/A-04-官方案例与版本差异.md",
+      "label": "官方案例与版本差异",
+      "description": "带出处的关键帧与方法解析。"
+    },
+    {
+      "id": "writing-guide",
+      "sourcePath": "模板/写作规范.md",
+      "label": "写作规范",
+      "description": "统一素材分工、提示词与验收方式。"
+    },
+    {
+      "id": "lesson-template",
+      "sourcePath": "模板/教学文档模板.md",
+      "label": "教学文档模板",
+      "description": "组织自己的学习与教学笔记。"
+    },
+    {
+      "id": "prompt-template",
+      "sourcePath": "模板/提示词文档模板.md",
+      "label": "提示词文档模板",
+      "description": "保留目标、参数、检查点和修复记录。"
+    },
+    {
+      "id": "skill-guide",
+      "sourcePath": "使用技能.md",
+      "label": "导演技能资料",
+      "description": "了解制作包工作流，下载完整技能资料。"
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "景深：观众看哪里",
+      "images": [
+        "02-景深与焦段/教学/图/L02-01-浅景深.jpg",
+        "02-景深与焦段/教学/图/L02-01-深焦.jpg"
+      ]
+    },
+    {
+      "title": "光质：硬光与软光",
+      "images": [
+        "04-光影与色彩/教学/图/L04-01-硬光.jpg",
+        "04-光影与色彩/教学/图/L04-01-软光.jpg"
+      ]
+    },
+    {
+      "title": "色温：冷与暖",
+      "images": [
+        "04-光影与色彩/教学/图/L04-01-冷色温.jpg",
+        "04-光影与色彩/教学/图/L04-01-暖色温.jpg"
+      ]
+    },
+    {
+      "title": "人物切点：正确与错误",
+      "images": [
+        "01-景别/教学/图/L01-03-切点正确.jpg",
+        "01-景别/教学/图/L01-03-切点错误.jpg"
+      ]
+    },
+    {
+      "title": "焦点：从物到人",
+      "images": [
+        "02-景深与焦段/教学/图/L02-03-焦点在杯子.jpg",
+        "02-景深与焦段/教学/图/L02-03-焦点在脸上.jpg"
+      ]
+    }
+  ],
+  "shots": [
+    {
+      "label": "大远景",
+      "term": "EWS",
+      "description": "让环境说话，人只是世界里的一个点。",
+      "file": "L01-01-大远景.jpg"
+    },
+    {
+      "label": "远景",
+      "term": "WS",
+      "description": "全身可见，交代人物所处的空间。",
+      "file": "L01-01-远景.jpg"
+    },
+    {
+      "label": "全景",
+      "term": "FS",
+      "description": "头到脚完整，读懂身体的动作。",
+      "file": "L01-01-全景.jpg"
+    },
+    {
+      "label": "中全景",
+      "term": "MFS",
+      "description": "切在大腿中部，让姿态和表情同时可读。",
+      "file": "L01-01-中全景.jpg"
+    },
+    {
+      "label": "中景",
+      "term": "MS",
+      "description": "切在腰部，表情、手与环境恰好平衡。",
+      "file": "L01-01-中景.jpg"
+    },
+    {
+      "label": "中近景",
+      "term": "MCU",
+      "description": "切在胸口，开始靠近人物的内心。",
+      "file": "L01-01-中近景.jpg"
+    },
+    {
+      "label": "近景",
+      "term": "CU",
+      "description": "肩部以上，把注意力留给表情。",
+      "file": "L01-01-近景.jpg"
+    },
+    {
+      "label": "大特写",
+      "term": "ECU",
+      "description": "只留一个局部，把细节放大成事件。",
+      "file": "L01-01-大特写.jpg"
+    },
+    {
+      "label": "微距",
+      "term": "MACRO",
+      "description": "看见纤维和水珠，进入另一种尺度。",
+      "file": "L01-01-微距.jpg"
+    }
+  ],
+  "imageQuality": {
+    "01-景别/教学/图/L01-01-景别阶梯总览.jpg": 92,
+    "附录/图/seedance25-greenscreen-06.jpg": 92
+  }
+}
